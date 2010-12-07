@@ -1,0 +1,160 @@
+@import "reset.css";
+@background: #c3c3c3;
+@fontColor: #222222;
+@baseBlue: #00126b;
+@baseRed: #a80006;
+@fontFace: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@fontFace2: 'Myriad Pro', Myriad, Frutiger, Arial, sans-serif;
+
+.roundCorners (@radius: 5px) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.boxShadow (@distance: 3px){
+	/*-moz-box-shadow: 0 1px @distance white;
+	-webkit-box-shadow: 0 1px @distance white; */
+	text-shadow: 0 1px 0px white;
+}
+
+.gradient (@from: rgb(255, 255, 255), @to: rgb(221,221,221)) {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@from), to(@to));
+}
+
+/**
+ * Page Layout
+ **/
+body {
+	background: @background url(../../page-back.jpg) no-repeat;
+	font-family: @fontFace;
+	font-size: 16px;
+	color: @fontColor;
+}
+
+a {
+	text-decoration: none;
+	color: @fontColor;
+	:hover {
+		color: @fontColor + 33%;
+	}
+}
+
+#page {
+	background-image: url(../../images/safari.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	width: 990px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 0;
+	
+	h1 {
+		font-family: @fontFace2;
+		font-size: 65px;
+		color: #606060;
+		.boxShadow(1px);
+		text-align: center;
+		padding-top: 300px;
+	}
+}
+/**
+ * Die Obere Box mit den Facts
+ */
+#infobox {
+	background: url(../../images/ui-top.png) no-repeat 50% 0;
+	min-height: 284px;
+	ul {
+		.boxShadow(1px);
+		padding: 15px 240px;
+		line-height: 150%;
+		
+		a {
+			font-weight: bold;
+		}
+	}
+	
+	li {
+		float: left;
+		padding-left: 3px;
+		:after {
+			content: " | ";
+		}
+	}
+}
+/**
+ * Die Box mit den Social Media Buttons
+ **/
+#buttonbox {
+	background: url(../../images/ui-bottom.png) no-repeat 50% bottom;
+	min-height: 227px;
+	position: relative;
+	margin-top: -200px;
+	
+	
+	ul {
+		padding: 15px 200px;
+		margin: 0 auto;
+		position: relative;
+		bottom: 0;
+	}
+	
+	li {
+		float: left;
+		padding: 12px;
+		
+		a:after {
+			content: " ";
+		}
+		a:before {
+			content: " "
+		}
+	}
+}
+
+
+.button {
+	background: @fontColor url(../../images/alert-overlay.png) repeat-x; 
+	display: inline-block; 
+	padding: 8px 14px; 
+	color: #fff; 
+	text-decoration: none;
+	font-family: @fontFace2;
+	font-weight: bold;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+	width: 180px;
+	
+	:hover {
+		color: #fff - 20%;
+	}
+}
+
+
+.facebook {
+	background-color: @baseBlue;
+	
+}
+
+.xing {
+	background-color: @baseBlue + 30%;
+}
+
+.lastfm {
+	background-color: @baseBlue + 60%;
+}
+
+.blog {
+	background-color: @baseBlue + 90%;
+}
+
+.github {
+	background-color: @baseRed;
+}

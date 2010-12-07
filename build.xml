@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project name="feinbier" default="build" basedir=".">
+	
+	<!-- Aufraeumen -->
+	<target name="clean">
+		<delete dir="${basedir}/__compiled" />
+		<mkdir dir="${basedir}/__compiled/js" />
+		<mkdir dir="${basedir}/__compiled/css" />
+	</target>
+	
+	<!-- Call LESS CSS Compiler -->
+	<target name="less">
+		<!-- fancybox images kopieren -->
+		<copy todir="${basedir}/__compiled/css">
+			<fileset dir="css/fancybox" />
+		</copy>
+		
+		
+		<exec executable="lessc" failonerror="true">
+			<arg line="css/style.less __compiled/css/style-less.css" />
+		</exec>
+	</target>
+	
+	
+	<!-- Alle Files zu einem zusammenpacken -->
+	<target name="js.concatenate">
+		<concat destfile="${basedir}/__compiled/js/all.js">
+			<!-- Zuerst, was wir brauchen -->
+			<filelist dir="${basedir}/js" files="jquery-1.4.4.js,jquery.fancybox-1.3.4.js, user.js" />
+		</concat>
+	</target>
+	
+	<target name="css.concatenate" depends="less">
+		<concat destfile="${basedir}/__compiled/css/style.css">
+			<fileset dir="${basedir}/__compiled/css/" includes="*.css" excludes="style.css"/>
+		</concat>
+	</target>
+	
+	<!-- Jetzt YUI Compressor -->
+	<target name="js.minify" depends="js.concatenate">
+		<apply executable="java" parallel="false">
+			<fileset dir="${basedir}/js/build/" includes="*.js"/>
+			<arg line="-jar"/>
+			<arg path="yuicompressor-2.4.2.jar"/>
+			<srcfile/>
+			<arg line="-o"/>
+			<mapper type="glob" from="*.js" to="${basedir}/js/build/*-min.js"/>
+			<targetfile/>
+		</apply>
+	</target>
+	
+	<target name="build" depends="clean,js.concatenate,css.concatenate" />
+</project>
