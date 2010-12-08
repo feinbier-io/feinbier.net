@@ -1,11 +1,14 @@
 $(function() {
 
-	$('#infobox, a.button').buttonHover({
+	$('a.button').buttonHover({
 		delay: 150
 	});
 	
 	$('#footer a').fancybox({
-		'overlayShow'	:	false
+		'overlayShow'	:	false,
+		'onComplete'	: function() {
+			piwikTracker.trackGoal(1);
+		} 
 	});
 });
 
