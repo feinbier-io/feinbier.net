@@ -8338,7 +8338,7 @@ jQuery.each([ "Height", "Width" ], function( i, name ) {
 		delay: 150
 	});
 	
-	$('#footer a').fancybox({
+	$('a.contact').fancybox({
 		'overlayShow'	:	false,
 		'onComplete'	: function() {
 			piwikTracker.trackGoal(1);
