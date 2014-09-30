@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/core-icon/core-icon.html">
+<link rel="import" href="../bower_components/font-roboto/roboto.html">
+
+<polymer-element name="feinbier-page" noscript>
+
+    <template>
+        <link rel="stylesheet" href="styles.css">
+        <core-header-panel mode="standard">
+            <core-toolbar id="toolbar">
+                <!-- <h1 flex class="logo">Michael <strong>Feinbier</strong></h1> -->
+                <!-- <paper-button fill icon="mail" on-tap="{{test}}"></paper-button> -->
+            </core-toolbar>
+
+                <paper-button raisedbutton id="paper_icon_button">content</paper-button>
+            <content select="*"></content>
+
+        </core-header-panel>
+
+    </template>
+
+
+</polymer-element>
