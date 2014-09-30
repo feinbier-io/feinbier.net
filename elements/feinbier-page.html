@@ -2,20 +2,26 @@
 <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/core-icon/core-icon.html">
+<link rel="import" href="../bower_components/core-icons/core-icons.html">
 <link rel="import" href="../bower_components/font-roboto/roboto.html">
 
 <polymer-element name="feinbier-page" noscript>
 
     <template>
         <link rel="stylesheet" href="styles.css">
-        <core-header-panel mode="standard">
+        <core-header-panel mode="waterfall">
             <core-toolbar id="toolbar">
-                <!-- <h1 flex class="logo">Michael <strong>Feinbier</strong></h1> -->
-                <!-- <paper-button fill icon="mail" on-tap="{{test}}"></paper-button> -->
+                <h1 flex class="">Michael <strong>Feinbier</strong></h1>
+                <paper-button label="Webprojects" on-tap="{{test}}"></paper-button>
+                <paper-button label="Mobile Apps" on-tap="{{test}}"></paper-button>
+                <paper-button label="Vita" on-tap="{{test}}"></paper-button>
+                <paper-button fill icon="mail" on-tap="{{test}}"></paper-button>
             </core-toolbar>
 
-                <paper-button raisedbutton id="paper_icon_button">content</paper-button>
-            <content select="*"></content>
+
+            <div vertical layout>
+                <content select="*"></content>
+            </div>
 
         </core-header-panel>
 

@@ -7,21 +7,75 @@ $left2:  #4F6573;
 $center: #F2F2F2;
 $right1: #D9B18F;
 $right2: #A6705D;
+$grey1: darken($center, 40%);
 
 :host {
+  font-size: 16px;
+  font-family: "RobotoDraft",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 24px;
   height: 100%;
   margin: 0;
-  font-family: 'RobotoDraft', sans-serif;
   color: $left1;
+  background-color: $center;
+}
+
+a, a:hover, a:active, a:visited {
+  color: $left2;
+  lift: $left2;
 }
 
 core-header-panel {
   height: 100%;
+  font-weight: lighter;
+
+  h1 {
+    margin: 10px;
+    strong {
+      font-weight: normal;
+      color: $center;
+    }
+  }
+
+  //Icons
+  paper-button {
+    color: $center;
+    fill: $center;
+    &:hover {
+      color: $right2;
+    }
+    &::shadow #ripple {
+      color: $left2;
+    }
+  }
 }
 
 #toolbar {
-  //height: 400px;
-  background-color: darken($center, 10%);
+  //height: 120px;
+  height: auto;
+  background-color: $left1;
   color: $left2;
   fill: $left2;
+}
+
+footer {
+  a {
+    //font-weight: normal;
+  }
+
+  paper-button[raisedButton] {
+    background: white;
+    color: $grey1;
+    fill: $grey1;
+  }
+
+  paper-button::shadow #content {
+    padding: 5px;
+  }
+
+  paper-button::shadow #content > span {
+    margin-right: 1.5em;
+    margin-left: 0;
+    vertical-align: middle;
+  }
 }
