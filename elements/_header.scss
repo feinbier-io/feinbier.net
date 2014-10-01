@@ -1,0 +1,48 @@
+core-header-panel {
+  height: 100%;
+
+  h1 {
+    margin: 10px;
+    strong {
+      font-weight: normal;
+      color: $center;
+    }
+  }
+
+  //Icons
+  paper-button {
+    &:hover {
+      color: $right2;
+    }
+    &::shadow #ripple {
+      color: $left2;
+    }
+
+    //Responsive
+    &.mainmenu {
+      color: $center;
+      fill: $center;
+      @media screen and (max-width: $breakPhone) {
+        display: none;
+      }
+    }
+  }
+
+  paper-menu-button {
+    display: none;
+    @media screen and (max-width: $breakPhone) {
+      display: inherit;
+    }
+  }
+}
+
+#toolbar {
+  //height: 120px;
+  height: auto;
+  background-color: $left1;
+  color: $left2;
+  fill: $left2;
+}
+
+
+

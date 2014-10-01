@@ -5,7 +5,8 @@
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../bower_components/core-icon/core-icon.html">
 <link rel="import" href="../bower_components/core-icons/core-icons.html">
-<link rel="import" href="../bower_components/font-roboto/roboto.html">
+
+<link href='//fonts.googleapis.com/css?family=RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium|Noto+Serif&amp;lang=de' rel='stylesheet' type='text/css'>
 
 <polymer-element name="feinbier-page">
 
@@ -16,12 +17,12 @@
                 <h1 flex class="">Michael <strong>Feinbier</strong></h1>
 
                 <template repeat="{{menu}}">
-                    <paper-button label="{{name}}"></paper-button>
+                    <paper-button class="mainmenu" icon="{{icon}}" label="{{name}}"></paper-button>
                 </template>
 
                 <paper-menu-button selected="0" icon="menu" halign="right">
                     <template repeat="{{menu}}">
-                        <paper-item label="{{name}}"></paper-item>
+                        <paper-item icon="{{icon}}" label="{{name}}"></paper-item>
                     </template>
                 </paper-menu-button>
                 <paper-button fill icon="mail" on-tap="{{test}}"></paper-button>
@@ -37,7 +38,11 @@
     </template>
     <script>
         Polymer({
-            menu: [{name: 'Webprojects'}, {name: 'Mobile Apps'}, {name: 'Vita'}]
+            menu: [
+                {name: 'Webprojects', icon: 'developer-mode-tv'},
+                {name: 'Mobile Apps', icon: 'android'},
+                {name: 'Vita', icon: 'social:person'}
+            ]
         });
     </script>
 
