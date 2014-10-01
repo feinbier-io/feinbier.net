@@ -2,6 +2,8 @@
 <link rel="import" href="../bower_components/core-icon/core-icon.html">
 <link rel="import" href="../bower_components/core-icons/core-icons.html">
 <link rel="import" href="../bower_components/core-icons/social-icons.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog-transition.html">
 
 
 <polymer-element name="feinbier-footer" noscript>
@@ -14,9 +16,17 @@
 	            <a href="#"><paper-button raisedbutton icon="social:post-twitter" label="@denkweite"></paper-button></a>
 	            <a href="#"><paper-button raisedbutton icon="social:post-facebook" label="Michael.Feinbier"></paper-button></a>
 	        </div>
-		    <div>
-			    Icon made by <a href="http://www.coucouicons.com" title="Coucou">Coucou</a>
-			    licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+		    <div class="bottom" horizontal layout>
+                <div flex><h5>Impressum</h5>
+                    <address>Michael Feinbier<br>
+                    Erkrather Str. 296 <br>
+                        40231 D&uuml;sseldorf
+                    </address>
+                </div>
+			    <p class="ccby">Icon made by <a href="http://www.coucouicons.com" title="Coucou">Coucou</a>
+			    licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+                </p>
+            </div>
 	    </footer>
     </template>
 </polymer-element>

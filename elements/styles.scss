@@ -4,20 +4,34 @@
  */
 $left1:  #2C3540;
 $left2:  #4F6573;
+$left3: lighten($left2, 10%);
 $center: #F2F2F2;
 $right1: #D9B18F;
 $right2: #A6705D;
+
+/*
+$left1: #334D5C;
+$left2: #45B29D;
+$left3: #EFEFEF;
+$center: #EFC94C;
+$right1: #E27A3F;
+$right2: #DF4949;
+*/
+
 $grey1: darken($center, 40%);
 
-:host {
+$breakPhone: 640px;
+$breakSmall: 400px;
+
+body {
   font-size: 16px;
   font-family: "RobotoDraft",Helvetica,Arial,sans-serif;
   font-weight: 300;
   line-height: 24px;
   height: 100%;
   margin: 0;
-  color: $left1;
-  background-color: $center;
+  color: $center;
+  background-color: $left3;
 }
 
 a, a:hover, a:active, a:visited {
@@ -25,59 +39,13 @@ a, a:hover, a:active, a:visited {
   lift: $left2;
 }
 
-core-header-panel {
-  height: 100%;
-  font-weight: lighter;
-
-  h1 {
-    margin: 10px;
-    strong {
-      font-weight: normal;
-      color: $center;
-    }
-  }
-
-  //Icons
-  paper-button {
-    color: $center;
-    fill: $center;
-    &:hover {
-      color: $right2;
-    }
-    &::shadow #ripple {
-      color: $left2;
-    }
-  }
+h1,h2,h3,h4,h5 {
+  font-family: "Noto Serif", serif;
 }
 
-#toolbar {
-  //height: 120px;
-  height: auto;
-  background-color: $left1;
-  color: $left2;
-  fill: $left2;
-}
 
-footer {
-  a {
-    //font-weight: normal;
-  }
 
-  paper-button[raisedButton] {
-    background: white;
-    color: $grey1;
-    fill: $grey1;
-  }
-
-  paper-button::shadow #content {
-    padding: 5px;
-  }
-
-  paper-button::shadow #content > span {
-    margin-right: 1.5em;
-    margin-left: 0;
-    vertical-align: middle;
-  }
-}
-
+@import "header";
 @import "content";
+@import "footer";
+@import "../fonts/flaticon.css";
