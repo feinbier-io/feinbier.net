@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="elements/styles.css">
     <link rel="import" href="elements/feinbier-page.html">
     <link rel="import" href="elements/feinbier-footer.html">
+    <link rel="import" href="bower_components/core-media-query/core-media-query.html">
 
 </head>
 <body fullbleed>
     <feinbier-page>
         <div layout horizontal class="content-section dark intro">
 	        <figure flex>
-		        <img src="images/lego3.svg" alt="">
+		        <?php #echo file_get_contents('images/lego3.svg'); ?>
 	        </figure>
 	        <div flex>
 		        <h3>Herzlich Willkommen</h3>
@@ -34,6 +35,18 @@
 
         <feinbier-footer></feinbier-footer>
     </feinbier-page>
+
+    <core-media-query id="mediaQueryMobile" query="max-width: 640px"></core-media-query>
+
+    <script>
+
+        document.querySelector('#mediaQueryMobile').addEventListener('core-media-change',
+            function(e) {
+                console.info('core-media-change', e.detail);
+                document.body.classList.toggle('core-narrow', e.detail.matches);
+            });
+
+    </script>
 
 </body>
 </html>
