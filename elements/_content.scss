@@ -1,0 +1,20 @@
+.content-section {
+	margin: 0;
+	padding: 2.5em;
+
+	&.dark {
+		background-color: $left1;
+		color: $right1;
+		fill: $right1;
+	}
+
+	&.intro {
+		figure > img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+
+
+}
