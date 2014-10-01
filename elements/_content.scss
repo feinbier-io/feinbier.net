@@ -1,6 +1,10 @@
 .content-section {
 	margin: 0;
 	padding: 2.5em;
+  
+  @media screen and (max-width: $breakPhone) {
+    padding: 2.5em 1em;
+  }
 
 	&.dark {
 		background-color: $left1;
@@ -9,12 +13,23 @@
 	}
 
 	&.intro {
-		figure > img{
-			width: 100%;
-			height: auto;
-		}
+      h3 {
+        color: $center;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      figure {
+        @media screen and (max-width: $breakSmall) {
+          display: none;
+        }
+      }
 	}
 
-
+    em {
+      font-family: "Noto Serif", serif;
+      font-style: normal;
+      color: $left3;
+    }
 
 }
