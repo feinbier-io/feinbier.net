@@ -5,17 +5,17 @@ core-header-panel {
     margin: 10px;
     strong {
       font-weight: normal;
-      color: $center;
+      color: white;
     }
   }
 
   //Icons
   paper-button {
     &:hover {
-      color: $right2;
+      color: white;
     }
     &::shadow #ripple {
-      color: $left2;
+      color: white;
     }
 
     //Responsive
@@ -39,9 +39,9 @@ core-header-panel {
 #toolbar {
   //height: 120px;
   height: auto;
-  background-color: $left1;
-  color: $left2;
-  fill: $left2;
+  background-color: $right2;
+  color: $right1;
+  fill: $right1;
 }
 
 
