@@ -17,7 +17,7 @@
                 <h1 flex class="">Michael <strong>Feinbier</strong></h1>
 
                 <template repeat="{{menu}}">
-                    <paper-button class="mainmenu" icon="{{icon}}" label="{{name}}"></paper-button>
+                    <a href="{{link}}"><paper-button class="mainmenu" icon="{{icon}}" label="{{name}}"></paper-button></a>
                 </template>
 
                 <paper-menu-button selected="0" icon="menu" halign="right">
@@ -40,7 +40,7 @@
         Polymer({
             menu: [
                 {name: 'Webprojects', icon: 'developer-mode-tv'},
-                {name: 'Mobile Apps', icon: 'android'},
+                {name: 'Mobile Apps', icon: 'android', link: './mobile'},
                 {name: 'Vita', icon: 'social:person'}
             ]
         });
