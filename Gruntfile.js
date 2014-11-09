@@ -27,10 +27,19 @@ module.exports = function (grunt) {
 			files: {
 				'build-csp.html': 'index.php'
 			}
-		}
+		},
+		watch: {
+			css: {
+				files: ['elements/*.scss'],
+				tasks: ['sass'],
+				options: {
+					spawn: false
+				}
+			}
+		},
 
 	});
 
-	grunt.registerTask('default', ['sass']);
+	grunt.registerTask('default', ['watch']);
 
 }
