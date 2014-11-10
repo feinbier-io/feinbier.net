@@ -1,12 +1,19 @@
 footer {
+  //background-color: #EFEFEF;
   a {
     //font-weight: normal;
   }
 
-  paper-button[raisedButton] {
+  paper-button[raisedButton],
+  paper-button {
     background: white;
-    color: $grey1;
-    fill: $grey1;
+    color: $right2;
+    fill: $right2;
+  }
+
+  paper-button:hover {
+    box-shadow: 0px 4px 10px 0 rgba(0,0,0,0.1),
+                0px 2px 10px 0px rgba(0,0,0,0.1);
   }
 
   paper-button::shadow #content {
@@ -20,11 +27,16 @@ footer {
   }
 
   .bottom {
-    background-color: darken($left2, 20%);
-    font-size: 12px;
+    //background-color: $left2;
+    //font-size: 12px;
+    font-size: 85%;
     //color: $center;
-    color: darken($center, 10%);
+    color: darken(#FFF, 25%);
 
+    a {
+      text-decoration: none;
+      color: darken($center, 25%);
+    }
   }
 
   &>div {
