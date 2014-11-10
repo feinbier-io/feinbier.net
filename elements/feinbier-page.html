@@ -26,6 +26,7 @@
                     </template>
                 </paper-menu-button>
                 <paper-button fill icon="mail" on-tap="{{test}}"></paper-button>
+                <a href="tel:+4916094641123"><paper-button fill icon="settings-phone"></paper-button></a>
             </core-toolbar>
 
 
@@ -33,15 +34,16 @@
                 <content select="*"></content>
             </div>
 
+
+
         </core-header-panel>
 
     </template>
     <script>
         Polymer({
             menu: [
-                {name: 'Webprojects', icon: 'developer-mode-tv'},
-                {name: 'Mobile Apps', icon: 'android', link: './mobile'},
-                {name: 'Vita', icon: 'social:person'}
+                {name: 'Vita', icon: 'assignment-ind'},
+                {name: 'Leistungen', icon: 'developer-mode-tv'}
             ]
         });
     </script>

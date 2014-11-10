@@ -4,24 +4,26 @@
 <link rel="import" href="../bower_components/core-icons/social-icons.html">
 <link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
 <link rel="import" href="../bower_components/paper-dialog/paper-dialog-transition.html">
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
 
 
 <polymer-element name="feinbier-footer" noscript>
     <template>
         <link rel="stylesheet" href="styles.css">
 	    <footer>
-	        <div horizontal around-justified layout>
-	            <a  href="https://github.com/michaelfeinbier" target="_blank"><paper-button raisedbutton role="button" icon="social:post-github" label="/michaelfeinbier"></paper-button></a>
-	            <a  href="https://www.xing.com/profile/Michael_Feinbier" target="_blank"><paper-button raisedbutton role="button" icon="social:person-add" label="XING"></paper-button></a>
-	            <a href="#"><paper-button raisedbutton icon="social:post-twitter" label="@denkweite"></paper-button></a>
-	            <a href="#"><paper-button raisedbutton icon="social:post-facebook" label="Michael.Feinbier"></paper-button></a>
+	        <div horizontal justified layout>
+	            <a  href="mailto:info@feinbier.net" target="_blank"><paper-button raisedbutton role="button" icon="inbox" label="Kontakt"></paper-button></a>
+	            <a  href="https://github.com/michaelfeinbier" target="_blank"><paper-button  role="button" icon="social:post-github" label="github"></paper-button></a>
+	            <a  href="https://github.com/michaelfeinbier" target="_blank"><paper-button  role="button" icon="social:post-linkedin" label="linkedin"></paper-button></a>
+	            <a  href="https://www.xing.com/profile/Michael_Feinbier" target="_blank"><paper-button  role="button" icon="social:person-add" label="XING"></paper-button></a>
+                <a href="#">&nbsp;</a>
+                <paper-fab id="contact-me" icon="mail"></paper-fab>
+                <!-- <a href="#"><paper-button icon="social:post-twitter" label="@denkweite"></paper-button></a>
+	            <a href="#"><paper-button icon="social:post-facebook" label="Michael.Feinbier"></paper-button></a> -->
 	        </div>
 		    <div class="bottom" horizontal layout>
-                <div flex><h5>Impressum</h5>
-                    <address>Michael Feinbier<br>
-                    Erkrather Str. 296 <br>
-                        40231 D&uuml;sseldorf
-                    </address>
+                <div>&copy; 2014 - Michael Feinbier <a href="#">Impressum</a> |
+                    Code der Website auf <a href="" target="_blank">github</a> verfügbar unter <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>
                 </div>
             </div>
 	    </footer>
