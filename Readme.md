@@ -8,6 +8,7 @@ Alle benötigten Node Module installieren
 
  ```bash
  npm install
+ bower install
  ```
 
 Danach Build mittels Grunt

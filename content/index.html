@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Michael Feinbier | Freelance PHP Developer</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<script src="../bower_components/platform/platform.js"></script>
+
+    <link rel="stylesheet" href="../elements/styles.css">
+    <link rel="import" href="../elements/feinbier-app-routes.html">
+    <link rel="import" href="../elements/feinbier-page.html">
+    <link rel="import" href="../elements/feinbier-footer.html">
+    <link rel="import" href="../bower_components/core-media-query/core-media-query.html">
+    <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="../bower_components/core-icon/core-icon.html">
+    <link rel="import" href="../bower_components/core-icons/core-icons.html">
+
+</head>
+<body fullbleed>
+    <feinbier-app-routes></feinbier-app-routes>
+    <feinbier-page>
+        <div layout horizontal class="content-section dark intro">
+	        <figure flex>
+	        </figure>
+	        <div flex three>
+		        <h2>&quot;Rockstar gefangen im Körper eines Informatikers&quot;</h2>
+                <p>Seit 10 Jahren bin ich in und um die Werbung tätig als <em>Softwareentwickler</em> und <em>Technischer Projektmanager</em>.
+                    Seit 2015 betreibe ich dies auf freiberuflicher Basis.<br>
+
+                    Gearbeitet habe ich für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson, O<sub>2</sub> oder BMW.<br>
+                    Auf den folgenden Seiten m&ouml;chte ich einen kleinen Einblick in mein Leistungsspektrum geben und Ihnen die Möglichkeit geben mich zu <a href="">kontaktieren</a>.
+                </p>
+	        </div>
+        </div>
+
+        <div layout horizontal center class="content-section">
+            <div flex three>
+                <h2><core-icon class="" icon="developer-mode-tv"></core-icon> Leistungen</h2>
+                <p>Seit Jahren bin ich im PHP-Bereich tätig. Angefangen bei herkömmlicher Andwendungsapplikation umfasst mein
+                Leistungsspektrum mittlerweile auch Entwicklung von Smartphone Apps (Android und HTML5-Webapps) aber auch
+                Technisches Projektmanagement</p>
+
+                <h3>Technische Skills</h3>
+                <ul>
+                    <li>Softwarearchitektur und -design</li>
+                    <li>PHP-Entwicklungen auf Basis von <em>Symfony2</em>, <em>TYPO3 FLOW</em> und <em>Laravel</em> auf Senior-Level</li>
+                    <li><em>TYPO3</em> Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> auf Basis von <em>Extbase &amp; Fluid</em></li>
+                    <li><em>Android-App</em> Entwicklung in nativem Java oder auf HTML5-Basis mit <em>Sencha Touch</em> zur Veröffentlichung auf verschiedenen Devices (iOS, Android, WindowsPhon)</li>
+                </ul>
+                <h3>&quot;Softskills&quot;</h3>
+                <ul>
+                    <li>Tätigkeit als <em>Technischer Projektmanager</em> für mehr als 2 Jahre</li>
+                    <li>Erfahrung in Konzeption, Kalkulation und Steuerung von IT-Projekten im Web-Umfeld</li>
+                </ul>
+            </div>
+            <div flex><core-icon class="content-icon" icon="developer-mode-tv"></core-icon></div>
+
+        </div>
+
+        <div layout horizontal center class="content-section dark">
+
+            <div flex three>
+                <h2><core-icon class="" icon="assignment-ind"></core-icon> Kurzes Faktenblatt (Vita)</h2>
+                <ul>
+                    <li>Geboren im November <em>1984</em> in Lippstadt</li>
+                    <li>Aufgewachsen in Waderloh-Diestedde, gewohnt in Oelde und Bielefeld, mittlerweile
+                        geankert in <em>Düsseldorf</em></li>
+                    <li>Abschluss <em>2008</em> als <em>Bachelor of Science (FH)</em> in <em>Angewandter Informatik</em>
+                    Schwerpunkt Medien an der FHDW</li>
+                </ul>
+            </div>
+            <div flex>
+                <core-icon class="content-icon" icon="assignment-ind"></core-icon>
+            </div>
+        </div>
+
+        <feinbier-footer></feinbier-footer>
+    </feinbier-page>
+
+    <core-media-query id="mediaQueryMobile" query="max-width: 640px"></core-media-query>
+
+    <script>
+
+        document.querySelector('#mediaQueryMobile').addEventListener('core-media-change',
+            function(e) {
+                document.body.classList.toggle('core-narrow', e.detail.matches);
+            });
+
+    </script>
+
+</body>
+</html>

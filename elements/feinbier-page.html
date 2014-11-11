@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
 <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/paper-menu-button/paper-menu-button.html">
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../bower_components/core-icon/core-icon.html">
@@ -12,25 +13,30 @@
 
     <template>
         <link rel="stylesheet" href="styles.css">
-        <core-header-panel mode="waterfall">
+        <core-header-panel mode="waterfall" id="mainContent">
             <core-toolbar id="toolbar">
                 <h1 flex class="">Michael <strong>Feinbier</strong></h1>
 
                 <template repeat="{{menu}}">
-                    <a href="{{link}}"><paper-button class="mainmenu" icon="{{icon}}" label="{{name}}"></paper-button></a>
+                    <a is="pushstate-anchor" href="{{link}}">
+                        <paper-button class="mainmenu">
+                            <core-icon icon="{{icon}}"></core-icon>
+                            {{name}}
+                        </paper-button>
+                    </a>
                 </template>
 
                 <paper-menu-button selected="0" icon="menu" halign="right">
                     <template repeat="{{menu}}">
-                        <paper-item icon="{{icon}}" label="{{name}}"></paper-item>
+                        <a href="#"><paper-item icon="{{icon}}" label="{{name}}"></paper-item></a>
                     </template>
                 </paper-menu-button>
-                <paper-button fill icon="mail" on-tap="{{test}}"></paper-button>
-                <a href="tel:+4916094641123"><paper-button fill icon="settings-phone"></paper-button></a>
+                <paper-icon-button icon="mail" on-tap="{{fillMail}}"></paper-icon-button>
+                <a href="tel:+4916094641123"><paper-icon-button icon="settings-phone"></paper-icon-button></a>
             </core-toolbar>
 
 
-            <div vertical layout>
+            <div >
                 <content select="*"></content>
             </div>
 
@@ -42,9 +48,12 @@
     <script>
         Polymer({
             menu: [
-                {name: 'Vita', icon: 'assignment-ind'},
-                {name: 'Leistungen', icon: 'developer-mode-tv'}
-            ]
+                //{name: 'Vita', icon: 'assignment-ind', 'link': '#/vita'},
+                //{name: 'Leistungen', icon: 'developer-mode-tv', link: '#/leistungen'}
+            ],
+            fillMail: function() {
+                window.location = 'mailto:info@feinbier.net';
+            }
         });
     </script>
 

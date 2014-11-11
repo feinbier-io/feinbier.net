@@ -1,9 +1,18 @@
-<link rel="import" href="../bower_components/app-router/app-router.js">
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-router/app-router.html">
 
-<polymer-element name="feinbier-app-routes" noscript>
+<polymer-element name="feinbier-app-routes">
     <template>
-        <app-router>
-            <app-route path="/mobile" import="content/mobile.html"></app-route>
+        <app-router id="router" on-state-change="{{stateChange}}">
         </app-router>
     </template>
+
+    <script>
+        Polymer({
+            stateChange: function(event) {
+                console.log(arguments);
+
+            }
+        })
+    </script>
 </polymer-element>
