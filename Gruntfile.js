@@ -4,6 +4,8 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 	grunt.loadNpmTasks('grunt-vulcanize');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('assemble');
+
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -30,7 +32,9 @@ module.exports = function (grunt) {
 					}
 				},
 				files: {
-					'index.html': 'content/index.html'
+					'index.html': 'compiled/index.html',
+					'impressum.html': 'compiled/impressum.html',
+					'datenschutz.html': 'compiled/datenschutz.html'
 				}
 			}
 		},
@@ -41,6 +45,10 @@ module.exports = function (grunt) {
 				options: {
 					spawn: false
 				}
+			},
+			assemble: {
+				files: ['**/*.hbs'],
+				tasks: ['assemble']
 			}
 		},
 		uglify: {
@@ -52,11 +60,23 @@ module.exports = function (grunt) {
 					'index.js': ['index.js']
 				}
 			}
+		},
+		assemble: {
+			options: {
+				layout: 'layouts/feinbier.hbs',
+				flatten: true,
+				assets: './'
+			},
+			build: {
+				files: {
+					'compiled/': ["content/**/*.hbs" ]
+				}
+			}
 		}
 
 	});
 
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['sass:dist', 'vulcanize', 'uglify'])
+	grunt.registerTask('build', ['sass:dist', 'assemble', 'vulcanize', 'uglify']);
 
 }

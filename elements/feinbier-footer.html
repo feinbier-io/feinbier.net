@@ -2,6 +2,7 @@
 <link rel="import" href="../bower_components/core-icon/core-icon.html">
 <link rel="import" href="../bower_components/core-icons/core-icons.html">
 <link rel="import" href="../bower_components/core-icons/social-icons.html">
+<link rel="import" href="../bower_components/core-tooltip/core-tooltip.html">
 <link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
 <link rel="import" href="../bower_components/paper-dialog/paper-dialog-transition.html">
 <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
@@ -12,7 +13,7 @@
         <link rel="stylesheet" href="styles.css">
         <footer>
             <div horizontal justified layout>
-                <a href="mailto:info@feinbier.net" target="_blank">
+                <a href="mailto:info@feinbier.net">
                     <paper-button raised role="button">
                         <core-icon icon="inbox"></core-icon>
                         Kontakt
@@ -24,12 +25,12 @@
                         github
                     </paper-button>
                 </a>
-                <a href="https://github.com/michaelfeinbier" target="_blank">
+                <!--<a href="https://github.com/michaelfeinbier" target="_blank">
                     <paper-button role="button">
                         <core-icon icon="social:post-linkedin"></core-icon>
                         linkedin
                     </paper-button>
-                </a>
+                </a>-->
                 <a href="https://www.xing.com/profile/Michael_Feinbier" target="_blank">
                     <paper-button role="button">
                         <core-icon icon="social:person-add"></core-icon>
@@ -37,11 +38,13 @@
                     </paper-button>
                 </a>
                 <a href="#">&nbsp;</a>
-                <paper-fab id="contact-me" icon="mail"></paper-fab>
+                <core-tooltip id="contact-me" label="Jetzt eine E-Mail schreiben" position="bottom">
+                    <a href="mailto:info@feinbier.net" class="create-mail"><paper-fab icon="create"></paper-fab></a>
+                </core-tooltip>
             </div>
             <div class="bottom" horizontal layout>
-                <div>&copy; 2014 - Michael Feinbier <a href="#">Impressum</a> |
-                    Code der Website auf <a href="" target="_blank">github</a> verfügbar unter <a
+                <div>&copy; 2014 <a href="/impressum.html">Impressum</a> &amp; <a href="/datenschutz.html">Datenschutz</a> |
+                    Code der Website auf <a href="https://github.com/michaelfeinbier/feinbier.net/tree/feinbier2014" target="_blank">github</a> verfügbar unter <a
                             href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>
                 </div>
             </div>

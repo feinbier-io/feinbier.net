@@ -1,7 +1,7 @@
 .content-section {
   margin: 0;
   padding: 2.5em;
-  background: lighten($left2, 20%);
+  background: lighten($left2, 30%);
 
   @media screen and (max-width: $breakPhone) {
     padding: 2.5em 1em;
@@ -31,9 +31,14 @@
       color: white;
       font-size: 110%;
     }
+
+    a,a:hover,a:active {
+      color: white;
+    }
   }
   &.intro {
-    background: $left2 url("../images/zeichnung-michael.png") no-repeat;
+    background-image: url("../images/zeichnung-michael.png");
+    background-repeat: no-repeat;
     background-size: 30%;
     background-position: 25px 0;
 
@@ -63,10 +68,3 @@
 
 }
 
-#contact-me {
-  color: white;
-  position: fixed;
-  bottom: 40px;
-  right: 100px;
-  background-color: $actionColor;
-}

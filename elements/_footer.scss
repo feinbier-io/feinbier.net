@@ -42,3 +42,13 @@ footer {
     }
   }
 }
+
+#contact-me {
+  position: fixed;
+  bottom: 40px;
+  right: 100px;
+  paper-fab {
+    background-color: $actionColor;
+    color: white;
+  }
+}
