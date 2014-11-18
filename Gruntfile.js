@@ -22,12 +22,14 @@ module.exports = function (grunt) {
 		vulcanize: {
 			default: {
 				options: {
-					csp: true,
-					strip: true,
+					csp: false,
+					strip: false,
 					//abspath: '/',
 					excludes: {
 						imports: [
 							//"polymer.html"
+                            "feinbier-footer.html",
+                            "core-header-panel.html"
 						]
 					}
 				},
@@ -69,7 +71,7 @@ module.exports = function (grunt) {
 			},
 			build: {
 				files: {
-					'compiled/': ["content/**/*.hbs" ]
+					'./': ["content/**/*.hbs" ]
 				}
 			}
 		}
@@ -77,6 +79,6 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['sass:dist', 'assemble', 'vulcanize', 'uglify']);
+	grunt.registerTask('build', ['sass:dist', 'assemble']);
 
 }
