@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="styles.css">
         <core-header-panel mode="waterfall" id="mainContent">
             <core-toolbar id="toolbar">
-                <h1 flex class="">Michael <strong>Feinbier</strong></h1>
+                <h1 flex>Michael <strong>Feinbier</strong></h1>
 
-                <template repeat="{{menu}}">
+                <!--<template repeat="{{menu}}">
                     <a is="pushstate-anchor" href="{{link}}">
                         <paper-button class="mainmenu">
                             <core-icon icon="{{icon}}"></core-icon>
@@ -30,13 +30,13 @@
                     <template repeat="{{menu}}">
                         <a href="#"><paper-item icon="{{icon}}" label="{{name}}"></paper-item></a>
                     </template>
-                </paper-menu-button>
+                </paper-menu-button> -->
                 <paper-icon-button icon="mail" on-tap="{{fillMail}}"></paper-icon-button>
                 <a href="tel:+4916094641123"><paper-icon-button icon="settings-phone"></paper-icon-button></a>
             </core-toolbar>
 
 
-            <div >
+            <div>
                 <content select="*"></content>
             </div>
 

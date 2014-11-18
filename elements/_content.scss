@@ -1,7 +1,7 @@
 .content-section {
   margin: 0;
   padding: 2.5em;
-  background: lighten($left2, 30%);
+  background: lighten($left2, 35%);
 
   @media screen and (max-width: $breakPhone) {
     padding: 2.5em 1em;
@@ -24,7 +24,6 @@
 
   &.dark {
     background-color: $left2;
-    //background-color: #FFFFFF;
     color: $right1;
     fill: $right1;
     em {

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7 ]> <html class="ie6 ielt9"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ielt9"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ielt9"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
 <head>
     <title>Michael Feinbier | Freelance PHP Developer</title>
 
@@ -25,68 +29,94 @@
     <link rel="import" href="./bower_components/core-icons/core-icons.html">
     <link rel="import" href="./bower_components/paper-shadow/paper-shadow.html">
 
+	<!--[if lt IE 9]>
+	<script src="./bower_components/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
+
 </head>
 <body fullbleed>
 <feinbier-page>
 
     <div layout horizontal class="content-section dark intro">
-    <paper-shadow z="1"></paper-shadow>
-    <figure flex>
-    </figure>
-    <div flex three>
-        <h2><core-icon icon="chevron-right"></core-icon>&quot;Rockstar gefangen im Körper eines Informatikers&quot;</h2>
-        <p>Seit 10 Jahren bin ich in und um die Werbung tätig als <em>Softwareentwickler</em> und <em>Technischer Projektmanager</em>.
-            Seit 2015 betreibe ich dies auf freiberuflicher Basis.<br>
+	<paper-shadow z="1"></paper-shadow>
+	<figure flex>
+	</figure>
+	<div flex three>
+		<h2>
+			<core-icon icon="chevron-right"></core-icon>
+			&quot;Rockstar gefangen im Körper eines Informatikers&quot;</h2>
+		<p>Seit 10 Jahren bin ich in und um die Werbung tätig als <em>Softwareentwickler</em> und <em>Technischer
+			Projektmanager</em>.
+			Seit 2015 auch auf freiberuflicher Basis.<br>
 
-            Gearbeitet habe ich für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson, O<sub>2</sub> oder BMW.<br>
-            Auf den folgenden Seiten m&ouml;chte ich einen kleinen Einblick in mein Leistungsspektrum geben und Ihnen die Möglichkeit geben mich zu kontaktieren.
-        </p>
-    </div>
+			Gearbeitet habe ich für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson, O<sub>2</sub> oder
+			BMW.<br>
+			Auf den folgenden Seiten m&ouml;chte ich einen kleinen Einblick in mein Leistungsspektrum geben und Ihnen
+			die Möglichkeit geben, mich zu kontaktieren.
+		</p>
+	</div>
 </div>
 
 <div layout horizontal center class="content-section">
-    <div flex three>
-        <h2><core-icon class="" icon="developer-mode-tv"></core-icon> Leistungen</h2>
-        <p>Seit über 10 Jahren bin ich im PHP-Bereich tätig. Angefangen bei herkömmlicher Andwendungsapplikation umfasst mein
-            Leistungsspektrum mittlerweile auch Entwicklung von Smartphone Apps (Android und HTML5-Webapps) aber auch
-            Technisches Projektmanagement</p>
+	<div flex three>
+		<h2>
+			<core-icon class="" icon="developer-mode-tv"></core-icon>
+			Leistungen
+		</h2>
+		<p>Seit über 10 Jahren bin ich im PHP-Bereich tätig. Angefangen bei herkömmlicher Andwendungsapplikation umfasst
+			mein
+			Leistungsspektrum mittlerweile auch Entwicklung von Smartphone Apps (Android und HTML5-Webapps) aber auch
+			Technisches Projektmanagement</p>
 
-        <h3>Technische Skills</h3>
-        <ul>
-            <li>Softwarearchitektur und -design</li>
-            <li>PHP-Entwicklungen auf Basis von <em>Symfony2</em>, <em>TYPO3 FLOW</em> und <em>Laravel</em> auf Senior-Level</li>
-            <li><em>TYPO3</em> Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> mit <em>Extbase &amp; Fluid</em></li>
-            <li><em>Android-App</em> Entwicklung in nativem Java oder auf HTML5-Basis mit <em>Sencha Touch</em> zur Veröffentlichung auf verschiedenen Devices (iOS, Android, WindowsPhone)</li>
-        </ul>
-        <h3>Projektmanagement</h3>
-        <ul>
-            <li>Tätigkeit als <em>Technischer Projektmanager</em> für mehr als 2 Jahre</li>
-            <li>Erfahrung in Konzeption, Kalkulation und Steuerung von IT-Projekten im Web-Umfeld</li>
-            <li>Anleitung und Führung von Entwickler-Teams</li>
-        </ul>
-    </div>
-    <div flex><core-icon class="content-icon" icon="developer-mode-tv"></core-icon></div>
+		<h3>Technische Skills</h3>
+		<ul>
+			<li>Softwarearchitektur und -design</li>
+			<li>PHP-Entwicklungen auf Basis von <em>Symfony2</em>, <em>TYPO3 FLOW</em> und <em>Laravel</em> auf
+				Senior-Level
+			</li>
+			<li><em>TYPO3</em> Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> mit <em>Extbase
+				&amp; Fluid</em></li>
+			<li><em>Android-App</em> Entwicklung in nativem Java oder auf HTML5-Basis mit <em>Sencha Touch</em> zur
+				Veröffentlichung auf verschiedenen Devices (iOS, Android, WindowsPhone)
+			</li>
+		</ul>
+		<h3>Projektmanagement</h3>
+		<ul>
+			<li>Tätigkeit als <em>Technischer Projektmanager</em> für mehr als 2 Jahre</li>
+			<li>Erfahrung in Konzeption, Kalkulation und Steuerung von IT-Projekten im Web-Umfeld</li>
+			<li>Anleitung und Führung von Entwickler-Teams</li>
+		</ul>
+	</div>
+	<div flex class="content-icon">
+		<core-icon class="content-icon" icon="developer-mode-tv"></core-icon>
+	</div>
 
 </div>
 
 <div layout horizontal center class="content-section dark">
-
-    <div flex three>
-        <h2><core-icon class="" icon="assignment-ind"></core-icon> Kurzes Faktenblatt (Vita)</h2>
-        <ul>
-            <li>Geboren im November <em>1984</em> in Lippstadt</li>
-            <li>Aufgewachsen in Waderloh-Diestedde, gewohnt in Oelde und Bielefeld, mittlerweile
-                geankert in <em>Düsseldorf</em></li>
-            <li>Abschluss <em>2008</em> als <em>Bachelor of Science (FH)</em> in <em>Angewandter Informatik</em>
-                Schwerpunkt Medien an der FHDW</li>
-            <li>6 Jahre als Webentwickler @ <em>HDNET GmbH</em>, Werther</li>
-            <li>1 Jahr als (Senior) Webentwickler @ <em>TWT Interactive GmbH</em>, Düsseldorf</li>
-            <li>2 Jahre als Technischer Projektmanager &amp; Management Supervisor bei der <em>Interone GmbH</em>, Düsseldorf</li>
-        </ul>
-    </div>
-    <div flex  class="content-icon">
-        <core-icon class="content-icon" icon="assignment-ind"></core-icon>
-    </div>
+	<paper-shadow z="1"></paper-shadow>
+	<div flex three>
+		<h2>
+			<core-icon class="" icon="assignment-ind"></core-icon>
+			Kurzes Faktenblatt (Vita)
+		</h2>
+		<ul>
+			<li>Geboren im November <em>1984</em> in Lippstadt</li>
+			<li>Aufgewachsen in Waderloh-Diestedde, gewohnt in Oelde und Bielefeld, mittlerweile
+				geankert in <em>Düsseldorf</em></li>
+			<li>Abschluss <em>2008</em> als <em>Bachelor of Science (FH)</em> in <em>Angewandter Informatik</em>
+				Schwerpunkt Medien an der FHDW
+			</li>
+			<li>6 Jahre als Webentwickler @ <em>HDNET GmbH</em>, Werther</li>
+			<li>1 Jahr als (Senior) Webentwickler @ <em>TWT Interactive GmbH</em>, Düsseldorf</li>
+			<li>2 Jahre als Technischer Projektmanager &amp; Management Supervisor bei der <em>Interone GmbH</em>,
+				Düsseldorf
+			</li>
+		</ul>
+	</div>
+	<div flex class="content-icon">
+		<core-icon class="content-icon" icon="assignment-ind"></core-icon>
+	</div>
 </div>
 
     <feinbier-footer></feinbier-footer>
