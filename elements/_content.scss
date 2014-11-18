@@ -46,9 +46,13 @@
       color: white;
     }
 
-    figure {
+    & {
       @media screen and (max-width: $breakSmall) {
-        display: none;
+        background-image: none;
+
+        figure {
+          display: none;
+        }
       }
     }
   }
@@ -66,5 +70,11 @@
     color: $right1;
   }
 
+}
+
+@media screen and (max-width: $breakSmall) {
+  div.content-icon {
+    display: none;
+  }
 }
 
