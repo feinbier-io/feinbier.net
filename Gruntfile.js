@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 				options: {
 					csp: true,
 					strip: true,
-					abspath: '/',
+					//abspath: '/',
 					excludes: {
 						imports: [
 							//"polymer.html"
