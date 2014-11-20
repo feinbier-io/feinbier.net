@@ -1,7 +1,7 @@
 <link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
 <link rel="import" href="../bower_components/core-image/core-image.html">
 
-<polymer-element name="feinbier-logo" noscript attributes="logo">
+<polymer-element name="feinbier-logo" noscript attributes="logo text">
 	<template>
 		<style>
 			:host {
@@ -31,6 +31,9 @@
 		<paper-shadow z="1">
 			<div class="logo">
 				<core-image preload fade sizing="contain" src="images/logos/{{logo}}"></core-image>
+				<template if="{{text}}">
+					<p>{{text}}</p>
+				</template>
 			</div>
 
 		</paper-shadow>
