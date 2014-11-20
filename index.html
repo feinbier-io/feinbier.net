@@ -18,11 +18,12 @@
     <meta property="og:image" content="http://michael.feinbier.net/images/facebook-cover.png">
 
 
-    <script src="./bower_components/platform/platform.js"></script>
+    <script src="./bower_components/webcomponentsjs/webcomponents.min.js"></script>
 
     <link rel="stylesheet" href="./elements/styles.css">
     <link rel="import" href="./elements/feinbier-page.html">
     <link rel="import" href="./elements/feinbier-footer.html">
+    <link rel="import" href="./elements/feinbier-logo.html">
     <link rel="import" href="./bower_components/core-media-query/core-media-query.html">
     <link rel="import" href="./bower_components/paper-fab/paper-fab.html">
     <link rel="import" href="./bower_components/core-icon/core-icon.html">
@@ -33,8 +34,8 @@
 <body fullbleed>
 <feinbier-page>
 
-    <div layout horizontal class="content-section dark intro">
-	<paper-shadow z="1"></paper-shadow>
+    <paper-shadow z="1">
+<div layout horizontal class="content-section dark intro">
 	<figure flex>
 	</figure>
 	<div flex three>
@@ -52,6 +53,7 @@
 		</p>
 	</div>
 </div>
+</paper-shadow>
 
 <div layout horizontal center class="content-section">
 	<div flex three>
@@ -89,8 +91,15 @@
 
 </div>
 
+<div layout horizontal center class="content-section">
+	<feinbier-logo logo="symfony.svg"></feinbier-logo>
+	<feinbier-logo logo="Logo_TYPO3.svg"></feinbier-logo>
+	<feinbier-logo logo="flow-logo-708px.png"></feinbier-logo>
+</div>
+
+<paper-shadow z="1">
 <div layout horizontal center class="content-section dark">
-	<paper-shadow z="1"></paper-shadow>
+
 	<div flex three>
 		<h2>
 			<core-icon class="" icon="assignment-ind"></core-icon>
@@ -114,6 +123,7 @@
 		<core-icon class="content-icon" icon="assignment-ind"></core-icon>
 	</div>
 </div>
+</paper-shadow>
 
     <feinbier-footer></feinbier-footer>
 </feinbier-page>

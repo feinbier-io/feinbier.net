@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../bower_components/core-image/core-image.html">
+
+<polymer-element name="feinbier-logo" noscript attributes="logo">
+	<template>
+		<style>
+			:host {
+				border-radius: 3px;
+				margin: 30px;
+				transition: opacity 400ms ease-in-out;
+			}
+
+			.logo {
+				transition: opacity 400ms ease-in-out;
+				background: white;
+				opacity: .4;
+			}
+
+			.logo:hover {
+				opacity: 1;
+			}
+
+			core-image {
+				width: 250px;
+				height: 100px;
+			}
+
+
+		</style>
+
+		<paper-shadow z="1">
+			<div class="logo">
+				<core-image preload fade sizing="contain" src="images/logos/{{logo}}"></core-image>
+			</div>
+
+		</paper-shadow>
+
+	</template>
+</polymer-element>
