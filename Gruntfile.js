@@ -2,7 +2,6 @@ module.exports = function (grunt) {
 
 
 	require('load-grunt-tasks')(grunt);
-	grunt.loadNpmTasks('grunt-vulcanize');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('assemble');
 
@@ -11,38 +10,18 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
 			options: {
-				outputStyle: 'compressed'
+				outputStyle: 'compressed',
+				sourceMap: true
 			},
 			dist: {
 				files: {
-					'elements/styles.css': 'elements/styles.scss'
-				}
-			}
-		},
-		vulcanize: {
-			default: {
-				options: {
-					csp: false,
-					strip: false,
-					//abspath: '/',
-					excludes: {
-						imports: [
-							//"polymer.html"
-                            "feinbier-footer.html",
-                            "core-header-panel.html"
-						]
-					}
-				},
-				files: {
-					'index.html': 'compiled/index.html',
-					'impressum.html': 'compiled/impressum.html',
-					'datenschutz.html': 'compiled/datenschutz.html'
+					'css/styles.css': 'sass/style.scss'
 				}
 			}
 		},
 		watch: {
 			css: {
-				files: ['elements/*.scss'],
+				files: ['sass/*.scss'],
 				tasks: ['sass'],
 				options: {
 					spawn: false

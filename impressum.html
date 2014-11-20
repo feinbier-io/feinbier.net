@@ -3,7 +3,8 @@
 <!--[if IE 7 ]>    <html class="ie7 ielt9"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8 ielt9"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class=""> <!--<![endif]-->
 <head>
     <title>Michael Feinbier | Freelance PHP Developer</title>
 
@@ -17,21 +18,42 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="http://michael.feinbier.net/images/facebook-cover.png">
 
-
-    <script src="./bower_components/platform/platform.js"></script>
-
-    <link rel="stylesheet" href="./elements/styles.css">
-    <link rel="import" href="./elements/feinbier-page.html">
-    <link rel="import" href="./elements/feinbier-footer.html">
-    <link rel="import" href="./bower_components/core-media-query/core-media-query.html">
-    <link rel="import" href="./bower_components/paper-fab/paper-fab.html">
-    <link rel="import" href="./bower_components/core-icon/core-icon.html">
-    <link rel="import" href="./bower_components/core-icons/core-icons.html">
-    <link rel="import" href="./bower_components/paper-shadow/paper-shadow.html">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+    <link href="./bower_components/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
 </head>
-<body fullbleed>
-<feinbier-page>
+<body>
+<header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <h1>Michael Feinbier</h1>
+            </a>
+
+        </div>
+        <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <div class="navbar-right">
+                <a href="" class="btn btn-flat btn-lg"><i class="mdi-action-alarm-off"></i></a>
+                <a href="" class="btn btn-flat btn-lg"><i class="mdi-action-alarm-off"></i></a>
+
+            </div>
+        </div>
+
+    </div>
+</header>
+<div class="container-fluid">
+
+    <div class="jumbotron">
+        <h1>Jumbotron</h1>
+
+        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
+            content or information.</p>
+
+        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+    </div>
+
 
     <div layout horizontal class="content-section dark">
     <div flex>
@@ -60,32 +82,33 @@
     </div>
 </div>
 
-    <feinbier-footer></feinbier-footer>
-</feinbier-page>
+</div>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<core-media-query id="mediaQueryMobile" query="max-width: 640px"></core-media-query>
-
+<script src="./bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+<script src="./bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
 <script>
+    $(document).ready(function () {
+        $.material.init();
+    });
 
-    document.querySelector('#mediaQueryMobile').addEventListener('core-media-change',
-            function(e) {
-                document.body.classList.toggle('core-narrow', e.detail.matches);
-            });
-
-</script>
-<script type="text/javascript">
     var _paq = _paq || [];
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
-    (function() {
-        var u="//stats.mail.feinbier.net/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
+    (function () {
+        var u = "//stats.mail.feinbier.net/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
         _paq.push(['setSiteId', 3]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
     })();
 </script>
-<noscript><p><img src="//stats.mail.feinbier.net/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="//stats.mail.feinbier.net/piwik.php?idsite=3" style="border:0;" alt=""/></p></noscript>
 
 </body>
 </html>
