@@ -3,6 +3,10 @@
   padding: 2.5em;
   background: lighten($left2, 35%);
 
+  &.small {
+    padding: .5em 2.5em;
+  }
+
   @media screen and (max-width: $breakPhone) {
     padding: 2.5em 1em;
   }
