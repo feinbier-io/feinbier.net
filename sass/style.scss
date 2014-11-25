@@ -1,3 +1,34 @@
-test {
-  background: black;
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../bower_components/bootstrap-material-design/sass/material";
+//@import "../bower_components/bootstrap-material-design/sass/material-wfont";
+
+//ThemeColors
+$left1: #D5D387;
+$left2: #A7C082;
+$left3: lighten(#67A295, 20%);
+$center: #67A295;
+$right1: #4F7688;
+$right2: #4B4969;
+$actionColor: #B1103C;
+
+//@include navbar-variant()
+
+header.navbar {
+	background-color: $right2;
+	font-family: "Noto Serif", serif;
+
+	.navbar-brand {
+		font-size: 2.7em;
+		line-height: 1em;
+		color: white;
+		span {
+			color: $center;
+		}
+	}
+
+	i {
+		color: $left2;
+		fill: $left2;
+		//font-size: 2em;
+	}
 }
