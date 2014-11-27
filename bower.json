@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-material-design": "~0.1.6"
+    "bootstrap-material-design": "~0.1.6",
+    "bootstrap-sass-official": "~3.3.1"
   }
 }
