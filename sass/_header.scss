@@ -1,0 +1,33 @@
+.navbar-brand {
+  opacity: 1;
+  @include transition(opacity .2s ease);
+  img {
+    @include transition(margin .2s ease);
+    display: inline-block;
+    background: rgba(0,0,0,.1);
+    padding: 1px;
+    border-radius: 100%;
+    width: 35px;
+    height: auto;
+    margin: 0 15px 0 0;
+
+  }
+
+
+}
+//Versteckt im Normalzustand
+.large {
+  .navbar-brand {
+    opacity: 0;
+
+    img {
+      margin-right: 15px + 50px;
+      margin-left: -50px;
+    }
+  }
+}
+
+#top.shadow {
+  //background: $orange;
+  box-shadow: $shadowString;
+}

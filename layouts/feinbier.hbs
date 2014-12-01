@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+
 
     <meta property="og:title" content="Michael Feinbier - Freelance PHP Delevoper">
     <meta property="og:site_name" content="Michael Feinbier">
@@ -19,17 +21,18 @@
     <meta property="og:image" content="http://michael.feinbier.net/images/facebook-cover.png">
 
     <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet"> -->
-    <link href="./bower_components/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">
+    <link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+    <link href="./bower_components/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">-->
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif|Roboto:400,700,300,500' rel='stylesheet' type='text/css'>
     <link href="css/styles.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-<header class="navbar navbar-fixed-top" id="top" role="banner">
+<header class="navbar navbar-fixed-top large" id="top" role="banner">
     <div class="container-fluid">
         <div class="navbar-header pull-left">
             <div class="navbar-brand">
+				<img src="images/avatar-michael.png" alt="" width="35">
                 <span>Michael</span> Feinbier
             </div>
 
@@ -42,7 +45,13 @@
         </div>
 
     </div>
+
 </header>
+<div class="container-fluid" id="navbar-intro">
+    <h1>Michael Feinbier<small>Freiberuflicher Medieninformatiker</small></h1>
+
+    <div class="avatar"><figure></figure></div>
+</div>
 <div class="container-fluid">
 
     {{> body}}
@@ -69,6 +78,7 @@
 
 <script src="./bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
 <script src="./bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+<script src="./js/main.js"></script>
 <script>
     $(document).ready(function () {
         $.material.init();

@@ -1,104 +1,84 @@
 $font-size-base: 16px;
+$font-family-base: "Roboto", "Noto", sans-serif;
+$grey: #333333;
+$shadowString: 0 2px 5px rgba(0,0,0,0.26);
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../bower_components/bootstrap-material-design/sass/material";
 //@import "../bower_components/bootstrap-material-design/sass/material-wfont";
-
-//ThemeColors
-$left1: #D5D387;
-$left2: #A7C082;
-$left3: lighten(#67A295, 20%);
-$center: #67A295;
-$right1: #4F7688;
-$right2: #4B4969;
-$actionColor: #B1103C;
-$contentColor: #EFF3E8;
-
-//@include navbar-variant()
+@import "mixins";
 body {
-  padding-top: 65px;
-  background-color: $left2;
-  color: $right1;
+  margin-top: 55px;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: "Noto Serif", serif;
+body, h1, h2, h3, h4, h5 {
+  font-family: "RobotoDraft", "Roboto", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
 }
 
-header.navbar {
-  background-color: $right2;
-  font-family: "Noto Serif", serif;
+@import "header";
 
-  .navbar-brand {
-    font-size: 2.7em;
-    line-height: 1em;
-    color: white;
-    span {
-      color: $right1;
-    }
-  }
-
-  .btn {
-    padding: 8px 20px;
-
-    &:hover {
-      background-color: transparent;
-    }
-  }
-
-  i {
-    color: $left2;
-    fill: $left2;
-    font-size: 1.7em;
-  }
-
-  .mail-btn i {
-    color: $right1;
-    fill: $right1
-  }
-}
-
-//Content
-.content-section {
+#navbar-intro {
   @include make-row();
-  padding: 2.5em;
-  background-color: $contentColor;
-  line-height: 1.6em;
+  display: block;
+  background: $primary;
 
-  &.dark {
-    @extend .shadow-z-2;
-    background-color: $left2;
+  h1 {
+    font-size: 56px;
+    font-weight: 500;
+    color: $navbar-brand-color;
+    padding: 60px 0 40px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include make-xs-column(8);
+    //@include make-xs-column-push(1);
+    @include make-sm-column(7);
+    @include make-sm-column-push(2);
 
-    h2 {
-      font-size: 24px;
-      font-weight: normal;
-      color: white;
-      margin: 0.8em 0;
-    }
-
-    em {
-      color: white;
-      font-family: "Noto Serif", serif;
-      font-style: normal;
+    small {
+      display: block;
+      font-weight: 500;
+      font-size: 20px;
+      color: $grey;
     }
   }
+
+  .avatar {
+    overflow: hidden;
+    height: 196px;
+    @include make-xs-column(4);
+    //@include make-xs-column-push(1);
+    img {
+      width: 250px;
+      margin: -15px 0;
+    }
+
+    figure {
+      margin: 20px auto 0 auto;
+      width: 150px;
+      height: 150px;
+      background: $orange url("../images/zeichnung-michael.png") no-repeat -25px -20px;
+      background-size: 250px;
+      padding: 1px;
+      border-radius: 100%;
+      @extend .shadow-z-3;
+      border: 1px solid rgba(0,0,0,.1);
+    }
+  }
+}
+
+.content-section {
+  @include feinbier-content;
 
   &.intro {
-    background-image: url("../images/zeichnung-michael.png");
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: 25px 0;
+    font-size: 20px;
+    line-height: 32px;
+    color: #212121;
+    padding-top: 80px;
 
-    @media (max-width: $grid-float-breakpoint) {
-      background-image: none;
-    }
-
-
-    & > div {
-      @include make-xs-column(12);
-      @include make-sm-column(8);
-      @include make-sm-column-offset(4);
+    h2 {
+      color: $primary;
+      margin-bottom: 30px;
     }
   }
 }
-
-@import "footer";
