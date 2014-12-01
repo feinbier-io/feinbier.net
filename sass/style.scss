@@ -1,9 +1,13 @@
 $font-size-base: 16px;
 $font-family-base: "Roboto", "Noto", sans-serif;
 $grey: #333333;
-$shadowString: 0 2px 5px rgba(0,0,0,0.26);
+$shadowString: 0 2px 5px rgba(0, 0, 0, 0.26);
+$material-font-path: "../bower_components/bootstrap-material-design/fonts";
+//$primary: #455a64;
+$primary: #607D8B;
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../bower_components/bootstrap-material-design/sass/material";
+@import "../bower_components/bootstrap-material-design/sass/icons-material-design";
 //@import "../bower_components/bootstrap-material-design/sass/material-wfont";
 @import "mixins";
 body {
@@ -30,6 +34,7 @@ body, h1, h2, h3, h4, h5 {
     padding: 60px 0 40px 0;
     margin-top: 0;
     margin-bottom: 0;
+    z-index: 2;
     @include make-xs-column(8);
     //@include make-xs-column-push(1);
     @include make-sm-column(7);
@@ -46,6 +51,7 @@ body, h1, h2, h3, h4, h5 {
   .avatar {
     overflow: hidden;
     height: 196px;
+    z-index: 1;
     @include make-xs-column(4);
     //@include make-xs-column-push(1);
     img {
@@ -62,7 +68,7 @@ body, h1, h2, h3, h4, h5 {
       padding: 1px;
       border-radius: 100%;
       @extend .shadow-z-3;
-      border: 1px solid rgba(0,0,0,.1);
+      border: 1px solid rgba(0, 0, 0, .1);
     }
   }
 }
@@ -82,3 +88,5 @@ body, h1, h2, h3, h4, h5 {
     }
   }
 }
+
+@import "footer";

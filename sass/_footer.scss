@@ -1,29 +1,80 @@
+#contact-action {
+  position: fixed;
+  background: $orange;
+  bottom: 115px;
+}
+
 footer {
-  background-color: darken($right2,20%);
-  padding: 2em 0;
+  @include make-row();
+  background: $bluegrey;
+  background: #455a64;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  posistion: relative;
 
-  .link-buttons {
-    @include make-row();
+  a,a:hover,a:active {
+    color: rgba(255, 255, 255, 0.84);
+  }
 
-    &>div {
-      @include make-xs-column(12);
-      @include make-sm-column(4);
-      text-align: center;
-      .btn {
-        background-color: $right2 !important;
+  a:hover {
+    text-decoration: none;
+    color: $orange;
+  }
+
+  i {
+    margin-left: -35px;
+    margin-right: 10px;
+  }
+
+  .copyright {
+    @include make-xs-column(6);
+    @include make-sm-column(5);
+    @include make-sm-column-push(1);
+
+
+  }
+
+  .links {
+    @include make-xs-column(6);
+    @include make-sm-column(5);
+    @include make-sm-column-push(2);
+
+    address {
+      font-size: 13px;
+
+      i {
+        margin-left: -25px;
+        margin-right: 10px;
       }
     }
   }
 
-  .copyright {
+  .navigation {
     @include make-row();
-    font-size: 14px;
-    margin-top: 1.5em;
-    color: $right2;
+    p {
+      @include make-xs-column(12);
+      @include make-sm-column-push(1);
+      font-size: 12px;
+    }
+  }
 
-    address {
-      @include make-xs-column(6);
+  address {
+    margin: 22px 0;
 
+    strong {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.84);
+    }
+  }
+
+}
+
+//XS Size
+@media (max-width: $screen-xs-max) {
+  footer {
+    i {
+      display: none;
     }
   }
 }
