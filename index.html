@@ -18,26 +18,26 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="http://michael.feinbier.net/images/facebook-cover.png">
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet"> -->
     <link href="./bower_components/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-<header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
+<header class="navbar navbar-fixed-top" id="top" role="banner">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <h1>Michael Feinbier</h1>
-            </a>
+        <div class="navbar-header pull-left">
+            <div class="navbar-brand">
+                <span>Michael</span> Feinbier
+            </div>
 
         </div>
-        <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <div class="navbar-header pull-right">
             <div class="navbar-right">
-                <a href="" class="btn btn-flat btn-lg"><i class="mdi-action-alarm-off"></i></a>
-                <a href="" class="btn btn-flat btn-lg"><i class="mdi-action-alarm-off"></i></a>
-
+                <a href="" class="btn navbar-btn mail-btn"><i class="mdi-communication-email"></i></a>
+                <a href="tel:+16094641123" class="btn navbar-btn"><i class="mdi-action-settings-phone"></i></a>
             </div>
         </div>
 
@@ -45,34 +45,25 @@
 </header>
 <div class="container-fluid">
 
-    <div class="jumbotron">
-        <h1>Jumbotron</h1>
-
-        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-            content or information.</p>
-
-        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-    </div>
-
-
-    <div layout horizontal class="content-section dark intro">
-	<paper-shadow z="1"></paper-shadow>
-	<figure flex>
-	</figure>
-	<div flex three>
+    <div class="content-section dark intro">
+	<div>
 		<h2>
-			<core-icon icon="chevron-right"></core-icon>
 			&quot;Rockstar gefangen im Körper eines Informatikers&quot;</h2>
-		<p>Seit 10 Jahren bin ich in und um die Werbung tätig als <em>Softwareentwickler</em> und <em>Technischer
-			Projektmanager</em>.
-			Seit 2015 auch auf freiberuflicher Basis.<br>
+        <p>Seit 10 Jahren bin ich in und um die Werbung tätig als <em>Softwareentwickler</em> und <em>Technischer
+            Projektmanager</em>.
+            Seit 2015 auch als freiberuflicher Medieninformatiker (BA) in den Regionen Düsseldorf/Köln, Hamburg und
+            Frankfurt/Main.<br>
 
-			Gearbeitet habe ich für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson, O<sub>2</sub> oder
-			BMW.<br>
-			Auf den folgenden Seiten m&ouml;chte ich einen kleinen Einblick in mein Leistungsspektrum geben und Ihnen
-			die Möglichkeit geben, mich zu kontaktieren.
-		</p>
+            Gearbeitet habe ich unter Anderm für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson, O<sub>2</sub> und
+            BMW.<br>
+            Auf den folgenden Seiten möchte ich einen kleinen Einblick in mein Leistungsspektrum geben und Ihnen
+            die Möglichkeit geben, mich zu kontaktieren.
+        </p>
 	</div>
+</div>
+
+<div class="content-section logos">
+    <div class="logo symfony"></div>
 </div>
 
 <div layout horizontal center class="content-section">
@@ -138,6 +129,22 @@
 </div>
 
 </div>
+
+<footer class="container-fluid">
+    <div class="link-buttons">
+        <div><a href="#" class="btn btn-lg btn-default btn-raised"><i class="mdi-communication-email"></i> E-Mail</a></div>
+        <div><a href="#" class="btn btn-lg btn-default btn-raised"><i class="mdi-social-public"></i> Github</a></div>
+        <div><a href="#" class="btn btn-lg btn-default btn-raised"><i class="mdi-social-person-add"></i> XING</a></div>
+    </div>
+    <div class="copyright">
+        <address>
+            <strong>Freiberuflicher Medieninformatiker (BA) <br />Michael Feinbier</strong><br />
+            Erkrather Straße 296<br />
+            40231 Düsseldorf
+        </address>
+    </div>
+</footer>
+
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 

@@ -1,0 +1,29 @@
+footer {
+  background-color: darken($right2,20%);
+  padding: 2em 0;
+
+  .link-buttons {
+    @include make-row();
+
+    &>div {
+      @include make-xs-column(12);
+      @include make-sm-column(4);
+      text-align: center;
+      .btn {
+        background-color: $right2 !important;
+      }
+    }
+  }
+
+  .copyright {
+    @include make-row();
+    font-size: 14px;
+    margin-top: 1.5em;
+    color: $right2;
+
+    address {
+      @include make-xs-column(6);
+
+    }
+  }
+}

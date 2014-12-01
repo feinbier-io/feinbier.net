@@ -11,6 +11,7 @@ $center: #67A295;
 $right1: #4F7688;
 $right2: #4B4969;
 $actionColor: #B1103C;
+$contentColor: #EFF3E8;
 
 //@include navbar-variant()
 body {
@@ -60,7 +61,8 @@ header.navbar {
 .content-section {
   @include make-row();
   padding: 2.5em;
-  background-color: #EFF3E8;
+  background-color: $contentColor;
+  line-height: 1.6em;
 
   &.dark {
     @extend .shadow-z-2;
@@ -69,8 +71,14 @@ header.navbar {
     h2 {
       font-size: 24px;
       font-weight: normal;
-      line-height: 1.5;
       color: white;
+      margin: 0.8em 0;
+    }
+
+    em {
+      color: white;
+      font-family: "Noto Serif", serif;
+      font-style: normal;
     }
   }
 
@@ -80,6 +88,10 @@ header.navbar {
     background-size: 30%;
     background-position: 25px 0;
 
+    @media (max-width: $grid-float-breakpoint) {
+      background-image: none;
+    }
+
 
     & > div {
       @include make-xs-column(12);
@@ -88,3 +100,5 @@ header.navbar {
     }
   }
 }
+
+@import "footer";
