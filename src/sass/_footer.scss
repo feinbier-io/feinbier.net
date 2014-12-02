@@ -27,7 +27,7 @@ footer {
   }
 
   .copyright {
-    @include make-xs-column(6);
+    @include make-xs-column(12);
     @include make-sm-column(5);
     @include make-sm-column-push(1);
 
@@ -35,7 +35,7 @@ footer {
   }
 
   .links {
-    @include make-xs-column(6);
+    @include make-xs-column(12);
     @include make-sm-column(4);
     @include make-sm-column-push(2);
 

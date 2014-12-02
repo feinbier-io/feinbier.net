@@ -8,7 +8,7 @@
 			Seit 2015 auch als freiberuflicher Medieninformatiker (BA) in den Regionen Düsseldorf/Köln, Hamburg und
 			Frankfurt/Main.<br>
 
-			Gearbeitet habe ich unter Anderm für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson,
+			Gearbeitet habe ich unter Anderem für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson,
 			O<sub>2</sub> und
 			BMW.<br>
 			Auf den folgenden Seiten möchte ich einen kleinen Einblick in mein Leistungsspektrum geben und Ihnen
@@ -34,7 +34,11 @@
 			{{#each leistungen}}
 				<div class="list-group-item">
 					<div class="row-action-primary">
-						<i class="mdi-action-grade"></i>
+						{{#if icon}}
+							<i class="{{icon}}"></i>
+						{{else}}
+							<i class="mdi-action-grade"></i>
+						{{/if}}
 					</div>
 					<div class="row-content">
 						<h4 class="list-group-item-heading">{{title}}</h4>
@@ -67,7 +71,7 @@
 			{{#each vita}}
 				<div class="list-group-item">
 					<div class="row-action-primary">
-						<i class="mdi-action-grade"></i>
+						<i class="{{icon}}"></i>
 					</div>
 					<div class="row-content">
 						{{#if zeit}}

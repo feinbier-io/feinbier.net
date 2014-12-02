@@ -5,12 +5,14 @@ $shadowString: 0 2px 5px rgba(0, 0, 0, 0.26);
 $material-font-path: "../../bower_components/bootstrap-material-design/fonts";
 //$primary: #455a64;
 $primary: #607D8B;
+$defaultBackground: #EEEEEE;
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../../bower_components/bootstrap-material-design/sass/material";
 @import "../../bower_components/bootstrap-material-design/sass/icons-material-design";
 @import "mixins";
 body {
   margin-top: 55px;
+  background-color: $primary;
 }
 
 body, h1, h2, h3, h4, h5 {
@@ -71,6 +73,10 @@ body, h1, h2, h3, h4, h5 {
       border: 1px solid rgba(0, 0, 0, .1);
     }
   }
+}
+
+#content {
+  background-color: $defaultBackground;
 }
 
 .content-section {

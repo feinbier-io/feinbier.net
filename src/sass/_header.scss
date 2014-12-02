@@ -53,6 +53,20 @@
     font-size: 1.7em;
   }
 
-  .mail-btn i {
+  .btn.mail-btn{
+	padding-left: 0;
+  }
+}
+
+//XS Size
+@media (max-width: $screen-xs-max) {
+  #top {
+	.btn {
+	  padding: 8px 10px;
+	}
+
+	.navbar-brand img {
+	  margin-right : 5px;
+	}
   }
 }

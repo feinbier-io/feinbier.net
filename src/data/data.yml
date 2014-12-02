@@ -3,18 +3,22 @@ phone: "+4916094641123"
 phoneString: +49 (0) 160 / 94 64 11 23
 leistungen:
   -
+    icon: mdi-editor-border-color
     title: Projektmanagement
     text: "Tätigkeit als <em>Technischer Projektmanager</em> für mehr als 2 Jahre, Erfahrung in Konzeption, Kalkulation und Steuerung von IT-Projekten im Web-Umfeld, Anleitung und Führung von Entwickler-Teams"
   -
+    icon: mdi-action-language
     title: "Softwarearchitektur und -design"
     text: "Konzeption, Machbarkeitstudien und Software-Setup aller nötigen Komponenten"
   -
+    icon: mdi-action-view-quilt
     title: "Symfony, TYPO3 FLOW, Laravel"
     text: "PHP Framework Entwicklungen auf Basis von <em>Symfony2</em>, <em>TYPO3 FLOW</em> und <em>Laravel</em> auf Senior-Level"
   -
     title: TYPO3
     text: "Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> mit <em>Extbase & Fluid</em>"
   -
+    icon: mdi-action-android
     title: "Mobile Applications"
     text: "<em>Android-App</em> Entwicklung in nativem Java oder auf HTML5-Basis mit <em>Sencha Touch</em> zur 				Veröffentlichung auf verschiedenen Devices (iOS, Android, WindowsPhone)"
 vita:
