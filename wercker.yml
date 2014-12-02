@@ -9,16 +9,18 @@ build:
 
 deploy:
   steps:
+    - add-to-known_hosts:
+        hostname: $DEPLOY_TO_SERVER
     - script:
         name: Write SSH KEY
         code: |-
-          export WERCKER_RSYNC_DEPLOY_SSHKEY=`mktemp`
-          echo -e $DEPLOY_TO_SSH_KEY > $WERCKER_RSYNC_DEPLOY_SSHKEY
+          export TEMP_KEY=`mktemp`
+          echo -e $DEPLOY_TO_SSH_KEY_PRIVATE > $TEMP_KEY
     - sjoerdmulder/rsync-deploy@0.1.0:
         host: $DEPLOY_TO_SERVER
         user: $DEPLOY_TO_USER
         directory: /var/www/michael.feinbier.net/html
         source: dist/
-        sshkey: $WERCKER_RSYNC_DEPLOY_SSHKEY
+        sshkey: $TEMP_KEY
 
 
