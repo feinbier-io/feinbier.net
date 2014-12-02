@@ -4,10 +4,16 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('assemble');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+
 
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		clean: {
+			build: 'dist'
+		},
 		sass: {
 			dev: {
 				options: {
@@ -36,7 +42,7 @@ module.exports = function (grunt) {
 				}
 			},
 			assemble: {
-				files: ['**/*.hbs','data/*.yml'],
+				files: ['**/*.hbs', 'data/*.yml'],
 				tasks: ['assemble:dev']
 			}
 		},
@@ -46,7 +52,11 @@ module.exports = function (grunt) {
 			},
 			build: {
 				files: {
-					'dist/js/main.js': ['js/main.js']
+					'dist/js/main.min.js': [
+						'bower_components/bootstrap-material-design/scripts/ripples.js',
+						'bower_components/bootstrap-material-design/scripts/material.js',
+						'js/main.js',
+					]
 				}
 			}
 		},
@@ -55,9 +65,13 @@ module.exports = function (grunt) {
 				layout: 'layouts/feinbier.hbs',
 				flatten: true,
 				assets: './',
-                data: 'data/*.yml'
+				data: 'data/*.yml',
+				production: false
 			},
 			dist: {
+				options: {
+					production: true
+				},
 				files: {
 					'dist': ["content/**/*.hbs" ]
 				}
@@ -67,11 +81,22 @@ module.exports = function (grunt) {
 					'./': ["content/**/*.hbs" ]
 				}
 			}
+		},
+		copy: {
+			dist: {
+				files: [
+					//Images
+					{expand: true, src: ['images/**'], dest: 'dist'},
+
+					//Fonts
+					{expand: true, flatten: false, src: ['bower_components/bootstrap-material-design/fonts/*'], dest: 'dist'},
+				]
+			}
 		}
 
 	});
 
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['sass:dist', 'assemble:dist']);
+	grunt.registerTask('build', ['clean', 'sass:dist', 'uglify', 'assemble:dist', 'copy']);
 
 }

@@ -8,3 +8,8 @@ css/*.css
 css/*.css.map
 
 ./*.html
+
+dist/*
+datenschutz.html
+impressum.html
+index.html

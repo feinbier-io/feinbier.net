@@ -2,31 +2,23 @@ box: wercker/nodejs
 # Build definition
 build:
   steps:
-    # A step that executes `npm install` command
     - npm-install
     - plasticine/bower-install@0.0.4
     - wercker/grunt@1.0.0:
         tasks: build
 
-    # A custom script step, name value is used in the UI
-    # and the code value contains the command that get executed
-    #- script:
-    #    name: echo nodejs information
-    #    code: |
-    #      echo "node version $(node -v) running"
-    #      echo "npm version $(npm -v) running"
 deploy:
   steps:
     - script:
         name: Write SSH KEY
         code: |-
-          export CAP_PRIVATE_KEY=`mktemp`
-          echo -e $DEPLOY_TO_SSH_KEY > $CAP_PRIVATE_KEY
+          export WERCKER_RSYNC_DEPLOY_SSHKEY=`mktemp`
+          echo -e $DEPLOY_TO_SSH_KEY > $WERCKER_RSYNC_DEPLOY_SSHKEY
     - sjoerdmulder/rsync-deploy@0.1.0:
         host: $DEPLOY_TO_SERVER
         user: $DEPLOY_TO_USER
         directory: /var/www/michael.feinbier.net/html
         source: dist/
-        sshkey: $CAP_PRIVATE_KEY
+        sshkey: $WERCKER_RSYNC_DEPLOY_SSHKEY
 
 
