@@ -29,20 +29,16 @@
   @include make-row();
 }
 
-.main {
-  //@include make-row;
+.leistungen {
+  @include make-xs-column(12);
+  @include make-sm-column(8);
+  @include make-sm-column-offset(2);
+}
 
-  .leistungen {
-	@include make-xs-column(12);
-	@include make-sm-column(8);
-	@include make-sm-column-offset(2);
-  }
+.vita {
+  @extend .leistungen;
+}
 
-  .vita {
-	@extend .leistungen;
-  }
-
-  .default-content {
-	@extend .leistungen;
-  }
+.default-content {
+  @extend .leistungen;
 }
