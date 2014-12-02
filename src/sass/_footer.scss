@@ -1,13 +1,6 @@
-#contact-action {
-  position: fixed;
-  background: $orange;
-  bottom: 115px;
-}
-
 footer {
   @include make-row();
-  background: $bluegrey;
-  background: #455a64;
+  background: $footerColor;
   color: rgba(255, 255, 255, 0.55);
   font-weight: 500;
   posistion: relative;
@@ -54,7 +47,7 @@ footer {
     p {
       @include make-xs-column(12);
       @include make-sm-column(11);
-      @include make-sm-column-push(1);
+      @include make-sm-column-offset(1);
       font-size: 12px;
     }
   }

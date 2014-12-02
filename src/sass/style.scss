@@ -5,6 +5,7 @@ $shadowString: 0 2px 5px rgba(0, 0, 0, 0.26);
 $material-font-path: "../../bower_components/bootstrap-material-design/fonts";
 //$primary: #455a64;
 $primary: #607D8B;
+$footerColor: #455a64;
 $defaultBackground: #EEEEEE;
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../../bower_components/bootstrap-material-design/sass/material";
@@ -77,21 +78,17 @@ body, h1, h2, h3, h4, h5 {
 
 #content {
   background-color: $defaultBackground;
-}
-
-.content-section {
-  @include feinbier-content;
   letter-spacing: .1px;
   line-height: 24px;
 
-  &.intro {
+  .intro {
     font-size: 20px;
     line-height: 32px;
     color: $lightbg-text;
     padding-top: 80px;
 
     h2 {
-      color: $primary;
+      color: $footerColor;
       margin-bottom: 30px;
     }
 

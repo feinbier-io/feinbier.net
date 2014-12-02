@@ -3,5 +3,5 @@
   @include make-xs-column(12);
   //@include make-xs-column-push(1);
   @include make-sm-column(9);
-  @include make-sm-column-push(2);
+  @include make-sm-column-offset(2);
 }

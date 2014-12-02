@@ -66,6 +66,7 @@ module.exports = function (grunt) {
 			options: {
 				layout: 'src/layouts/feinbier.hbs',
 				flatten: true,
+				partials: ['src/partials/*.hbs'],
 				assets: './',
 				data: 'src/data/*.yml',
 				production: false

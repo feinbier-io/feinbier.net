@@ -1,7 +1,7 @@
-<div class="content-section dark intro">
+<div class="intro">
 	<div>
 		<h2>
-			&quot;Rockstar gefangen im Körper eines Informatikers&quot;</h2>
+			&quot;Rockstar gefangen im Körper eines Informatikers&quot;<br></h2>
 
 		<p>Seit 10 Jahren bin ich in und um die Werbung tätig als <em>Softwareentwickler</em> und <em>Technischer
 			Projektmanager</em>.
@@ -17,15 +17,16 @@
 	</div>
 </div>
 
-<div class="content-section logos">
-	<div class="logo symfony"></div>
-</div>
 
-<div class="content-section">
-	<div>
-		<h2>Leistungen</h2>
 
-		<p>Seit über 10 Jahren bin ich im PHP-Bereich tätig. Angefangen bei herkömmlicher Andwendungsapplikation umfasst
+<div class="main">
+	<div class="leistungen">
+		<h2>Leistungen
+			<small> / Tätigkeitsfelder</small>
+		</h2>
+
+		<p class="bodytext">Seit über 10 Jahren bin ich im PHP-Bereich tätig. Angefangen bei herkömmlicher
+			Andwendungsapplikation umfasst
 			mein
 			Leistungsspektrum mittlerweile auch Entwicklung von Smartphone Apps (Android und HTML5-Webapps) aber auch
 			Technisches Projektmanagement</p>
@@ -53,20 +54,19 @@
 				{{/if}}
 			{{/each}}
 		</div>
+
 	</div>
 
-</div>
-
-<div class="content-section dark">
-
-	<div>
+	<div class="vita">
 		<h2>
 			Kurzes Faktenblatt
-			<small>(Vita)</small>
+			<small> / Vita</small>
 		</h2>
-		<p>Geboren im schönen Jahre 1984 in Lippstadt, wuchs ich in Diestedde auf, zog weiter nach Oelde um dann schließlich
-		in Bielefeld mein Studium zu absolvieren. </p>
-		<p>Seit 2011 lebe und arbeite ich in Düsseldorf.</p>
+		<p class="bodytext">Geboren im schönen Jahre 1984 in Lippstadt, wuchs ich in Diestedde auf, zog weiter nach
+			Oelde um dann schließlich
+			in Bielefeld mein Studium zu absolvieren. <br>
+			Seit 2011 lebe und arbeite ich in Düsseldorf.</p>
+
 		<div class="list-group">
 			{{#each vita}}
 				<div class="list-group-item">
@@ -78,6 +78,7 @@
 							<div class="least-content">{{zeit}}</div>
 						{{/if}}
 						<h4 class="list-group-item-heading">{{{firma}}}</h4>
+
 						<p class="list-group-item-text">{{{position}}}</p>
 					</div>
 				</div>

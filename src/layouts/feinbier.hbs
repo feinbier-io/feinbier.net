@@ -28,7 +28,7 @@
 	<link href="css/styles.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="">
 <header class="navbar navbar-fixed-top large" id="top" role="banner">
 	<div class="container-fluid">
 		<div class="navbar-header pull-left">
@@ -40,7 +40,8 @@
 		</div>
 		<div class="navbar-header pull-right">
 			<div class="navbar-right">
-				<a href="mailto:{{mail}}" class="btn navbar-btn btn-flat mail-btn"><i class="mdi-communication-email"></i></a>
+				<a href="mailto:{{mail}}"
+				   class="btn navbar-btn btn-flat mail-btn"><i class="mdi-communication-email"></i></a>
 				<a href="tel:{{phone}}" class="btn navbar-btn btn-flat"><i class="mdi-action-settings-phone"></i></a>
 			</div>
 		</div>
@@ -48,84 +49,68 @@
 	</div>
 
 </header>
-<div class="container-fluid" id="navbar-intro">
-	<div>
-		<h1>Michael Feinbier
-			<small>Freiberuflicher Medieninformatiker</small>
-		</h1>
+{{> intro}}
+<div class="container-fluid">
+	<div class="" id="content">
 
-		<div class="avatar">
-			<figure></figure>
+		{{> body}}
+	</div>
+</div>
+	<footer class="container-fluid">
+
+		<div class="copyright">
+			<address>
+				Freiberuflicher Medieninformatiker (BA)<br>
+				<strong><i class="mdi-social-person"></i> Michael Feinbier</strong>
+			</address>
 		</div>
-	</div>
-</div>
-<div class="container-fluid" id="content">
+		<div class="links">
+			<address>
+				Erkrather Straße 296<br>
+				40231 Düsseldorf<br>
+				<a href="tel:{{phone}}"><i class="mdi-communication-call"></i>{{phoneString}}</a><br>
+				<a href="mailto:{{mail}}"><i class="mdi-communication-email"></i> {{mail}} </a>
+			</address>
+		</div>
+		<div class="navigation">
+			<p>&copy; 2014 <a href="./impressum.html">Impressum</a> | <a href="./datenschutz.html">Datenschutz</a></p>
+		</div>
+	</footer>
 
-	{{> body}}
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-</div>
+	{{#if production}}
+		<script src="./js/main.min.js"></script>
 
-<footer class="container-fluid">
-	<!-- <a href="mailto:{{mail}}" class="btn btn-fab btn-raised mdi-content-drafts" id="contact-action"></a> -->
+	{{else}}
+		<script src="../bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+		<script src="../bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+		<script src="./js/main.js"></script>
+	{{/if}}
 
-	<!--<div class="link-buttons">
-		<div><a href="#" class="btn btn-lg btn-default btn-raised"><i class="mdi-communication-email"></i> E-Mail</a></div>
-		<div><a href="#" class="btn btn-lg btn-default btn-raised"><i class="mdi-social-public"></i> Github</a></div>
-		<div><a href="#" class="btn btn-lg btn-default btn-raised"><i class="mdi-social-person-add"></i> XING</a></div>
-	</div> -->
-	<div class="copyright">
-		<address>
-			Freiberuflicher Medieninformatiker (BA)<br>
-			<strong><i class="mdi-social-person"></i> Michael Feinbier</strong>
-		</address>
-	</div>
-	<div class="links">
-		<address>
-			Erkrather Straße 296<br>
-			40231 Düsseldorf<br>
-			<a href="tel:{{phone}}"><i class="mdi-communication-call"></i>{{phoneString}}</a><br>
-			<a href="mailto:{{mail}}"><i class="mdi-communication-email"></i> {{mail}} </a>
-		</address>
-	</div>
-	<div class="navigation">
-		<p>&copy; 2014 <a href="./impressum.html">Impressum</a> | <a href="./datenschutz.html">Datenschutz</a></p>
-	</div>
-</footer>
+	{{#if production}}
+		<script>
+			$(document).ready(function () {
+				$.material.init();
+			});
 
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-{{#if production}}
-	<script src="./js/main.min.js"></script>
-
-{{else}}
-	<script src="../bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
-	<script src="../bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
-	<script src="./js/main.js"></script>
-{{/if}}
-
-{{#if production}}
-	<script>
-		$(document).ready(function () {
-			$.material.init();
-		});
-
-		var _paq = _paq || [];
-		_paq.push(['trackPageView']);
-		_paq.push(['enableLinkTracking']);
-		(function () {
-			var u = "//stats.mail.feinbier.net/";
-			_paq.push(['setTrackerUrl', u + 'piwik.php']);
-			_paq.push(['setSiteId', 3]);
-			var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-			g.type = 'text/javascript';
-			g.async = true;
-			g.defer = true;
-			g.src = u + 'piwik.js';
-			s.parentNode.insertBefore(g, s);
-		})();
-	</script>
-	<noscript><p><img src="//stats.mail.feinbier.net/piwik.php?idsite=3" style="border:0;" alt=""/></p></noscript>
-{{/if}}
+			var _paq = _paq || [];
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function () {
+				var u = "//stats.mail.feinbier.net/";
+				_paq.push(['setTrackerUrl', u + 'piwik.php']);
+				_paq.push(['setSiteId', 3]);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.type = 'text/javascript';
+				g.async = true;
+				g.defer = true;
+				g.src = u + 'piwik.js';
+				s.parentNode.insertBefore(g, s);
+			})();
+		</script>
+		<noscript><p><img src="//stats.mail.feinbier.net/piwik.php?idsite=3" style="border:0;" alt=""/></p></noscript>
+	{{/if}}
 </body>
 </html>
