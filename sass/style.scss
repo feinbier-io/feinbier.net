@@ -23,8 +23,9 @@ body, h1, h2, h3, h4, h5 {
 @import "header";
 
 #navbar-intro {
-  @include make-row();
-  display: block;
+  &>div {
+    @include make-row();
+  }
   background: $primary;
 
   h1 {
@@ -75,18 +76,27 @@ body, h1, h2, h3, h4, h5 {
 
 .content-section {
   @include feinbier-content;
+  letter-spacing: .1px;
+  line-height: 24px;
 
   &.intro {
     font-size: 20px;
     line-height: 32px;
-    color: #212121;
+    color: $lightbg-text;
     padding-top: 80px;
 
     h2 {
       color: $primary;
       margin-bottom: 30px;
     }
+
+    em {
+      color: $orange;
+      font-style: normal;
+      font-weight: 500;
+    }
   }
 }
 
+@import "content";
 @import "footer";
