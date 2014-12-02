@@ -9,27 +9,35 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
-			options: {
-				outputStyle: 'compressed',
-				sourceMap: true
-			},
-			dist: {
+			dev: {
+				options: {
+					sourceMap: true
+				},
 				files: {
 					'css/styles.css': 'sass/style.scss'
+				}
+			},
+			dist: {
+				options: {
+					sourceMap: false,
+					outputStyle: 'compressed'
+				},
+				files: {
+					'dist/css/styles.css': 'sass/style.scss'
 				}
 			}
 		},
 		watch: {
 			css: {
 				files: ['sass/*.scss'],
-				tasks: ['sass'],
+				tasks: ['sass:dev'],
 				options: {
 					spawn: false
 				}
 			},
 			assemble: {
 				files: ['**/*.hbs','data/*.yml'],
-				tasks: ['assemble']
+				tasks: ['assemble:dev']
 			}
 		},
 		uglify: {
@@ -38,7 +46,7 @@ module.exports = function (grunt) {
 			},
 			build: {
 				files: {
-					'index.js': ['index.js']
+					'dist/js/main.js': ['js/main.js']
 				}
 			}
 		},
@@ -49,7 +57,12 @@ module.exports = function (grunt) {
 				assets: './',
                 data: 'data/*.yml'
 			},
-			build: {
+			dist: {
+				files: {
+					'dist': ["content/**/*.hbs" ]
+				}
+			},
+			dev: {
 				files: {
 					'./': ["content/**/*.hbs" ]
 				}
@@ -59,6 +72,6 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['sass:dist', 'assemble']);
+	grunt.registerTask('build', ['sass:dist', 'assemble:dist']);
 
 }
