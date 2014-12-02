@@ -6,9 +6,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('assemble');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-
-
 
 
 	grunt.initConfig({
@@ -19,7 +16,7 @@ module.exports = function (grunt) {
 		sass: {
 			dev: {
 				options: {
-					sourcemap: 'inline'
+					sourceMap: true
 				},
 				files: {
 					'src/css/styles.css': 'src/sass/style.scss'
@@ -27,8 +24,8 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				options: {
-					sourcemap: 'none',
-					style: 'compressed'
+					sourceMap: false,
+					outputStyle: 'compressed'
 				},
 				files: {
 					'dist/css/styles.css': 'src/sass/style.scss'

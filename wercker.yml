@@ -6,6 +6,7 @@ build:
     - plasticine/bower-install@0.0.4
     - wercker/grunt@1.0.0:
         tasks: build
+        fail-on-warnings: true
 
 deploy:
   steps:
