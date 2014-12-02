@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 				}
 			},
 			assemble: {
-				files: ['**/*.hbs'],
+				files: ['**/*.hbs','data/*.yml'],
 				tasks: ['assemble']
 			}
 		},
@@ -46,7 +46,8 @@ module.exports = function (grunt) {
 			options: {
 				layout: 'layouts/feinbier.hbs',
 				flatten: true,
-				assets: './'
+				assets: './',
+                data: 'data/*.yml'
 			},
 			build: {
 				files: {

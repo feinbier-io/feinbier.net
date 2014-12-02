@@ -1,0 +1,20 @@
+box: wercker/nodejs
+steps:
+  - plasticine/bower-install@0.0.4
+  - wercker/grunt@1.0.0
+# Build definition
+build:
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+    - bower-install
+    - grunt:
+        tasks: build
+
+    # A custom script step, name value is used in the UI
+    # and the code value contains the command that get executed
+    #- script:
+    #    name: echo nodejs information
+    #    code: |
+    #      echo "node version $(node -v) running"
+    #      echo "npm version $(npm -v) running"

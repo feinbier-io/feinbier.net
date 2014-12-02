@@ -2,4 +2,9 @@
 *.DS_Store
 bower_components
 node_modules
+
 elements/styles.css
+css/*.css
+css/*.css.map
+
+./*.html

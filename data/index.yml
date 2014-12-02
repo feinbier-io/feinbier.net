@@ -1,0 +1,39 @@
+mail: info@feinbier.net
+phone: +4916094641123
+leistungen:
+  -
+    title: Projektmanagement
+    text: "Tätigkeit als <em>Technischer Projektmanager</em> für mehr als 2 Jahre, Erfahrung in Konzeption, Kalkulation und Steuerung von IT-Projekten im Web-Umfeld, Anleitung und Führung von Entwickler-Teams"
+  -
+    title: "Softwarearchitektur und -design"
+    text: "Konzeption, Machbarkeitstudien und Software-Setup aller nötigen Komponenten"
+  -
+    title: "Symfony, TYPO3 FLOW, Laravel"
+    text: "PHP Framework Entwicklungen auf Basis von <em>Symfony2</em>, <em>TYPO3 FLOW</em> und <em>Laravel</em> auf Senior-Level"
+  -
+    title: TYPO3
+    text: "Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> mit <em>Extbase & Fluid</em>"
+  -
+    title: "Mobile Applications"
+    text: "<em>Android-App</em> Entwicklung in nativem Java oder auf HTML5-Basis mit <em>Sencha Touch</em> zur 				Veröffentlichung auf verschiedenen Devices (iOS, Android, WindowsPhone)"
+vita:
+  -
+    firma: "Studium &quot;Angewandte Informatik Schwerpunkt Medien&quot; (Bachelor of Science)"
+    position: An der Fachhochschule der Wirtschaft, Bielefeld
+    zeit: 2006 - 2008
+    icon: mdi-social-school
+  -
+    firma: "Interone GmbH, Düsseldorf"
+    position: "Management Supervisor / Technical Project Manager / Senior Developer"
+    zeit: 2012 - 2014
+    icon: mdi-social-domain
+  -
+    firma: "TWT Interactive GmbH, Düsseldorf"
+    position: Senior Web-Developer
+    zeit: 2011 - 2012
+    icon: mdi-social-domain
+  -
+    firma: "HDNET GmbH & Co. KG, Werther"
+    position: "Web-Developer /-Architect"
+    zeit: 2005 - 2011
+    icon: mdi-social-domain

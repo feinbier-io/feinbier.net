@@ -2,81 +2,87 @@
 	<div>
 		<h2>
 			&quot;Rockstar gefangen im Körper eines Informatikers&quot;</h2>
-        <p>Seit 10 Jahren bin ich in und um die Werbung tätig als <em>Softwareentwickler</em> und <em>Technischer
-            Projektmanager</em>.
-            Seit 2015 auch als freiberuflicher Medieninformatiker (BA) in den Regionen Düsseldorf/Köln, Hamburg und
-            Frankfurt/Main.<br>
 
-            Gearbeitet habe ich unter Anderm für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson, O<sub>2</sub> und
-            BMW.<br>
-            Auf den folgenden Seiten möchte ich einen kleinen Einblick in mein Leistungsspektrum geben und Ihnen
-            die Möglichkeit geben, mich zu kontaktieren.
-        </p>
+		<p>Seit 10 Jahren bin ich in und um die Werbung tätig als <em>Softwareentwickler</em> und <em>Technischer
+			Projektmanager</em>.
+			Seit 2015 auch als freiberuflicher Medieninformatiker (BA) in den Regionen Düsseldorf/Köln, Hamburg und
+			Frankfurt/Main.<br>
+
+			Gearbeitet habe ich unter Anderm für Kunden wie die Deutsche Post, Praktiker, Johnson&amp;Johnson,
+			O<sub>2</sub> und
+			BMW.<br>
+			Auf den folgenden Seiten möchte ich einen kleinen Einblick in mein Leistungsspektrum geben und Ihnen
+			die Möglichkeit geben, mich zu kontaktieren.
+		</p>
 	</div>
 </div>
 
 <div class="content-section logos">
-    <div class="logo symfony"></div>
+	<div class="logo symfony"></div>
 </div>
 
-<div layout horizontal center class="content-section">
-	<div flex three>
-		<h2>
-			<core-icon class="" icon="developer-mode-tv"></core-icon>
-			Leistungen
-		</h2>
+<div class="content-section">
+	<div>
+		<h2>Leistungen</h2>
+
 		<p>Seit über 10 Jahren bin ich im PHP-Bereich tätig. Angefangen bei herkömmlicher Andwendungsapplikation umfasst
 			mein
 			Leistungsspektrum mittlerweile auch Entwicklung von Smartphone Apps (Android und HTML5-Webapps) aber auch
 			Technisches Projektmanagement</p>
 
-		<h3>Technische Skills</h3>
-		<ul>
-			<li>Softwarearchitektur und -design</li>
-			<li>PHP-Entwicklungen auf Basis von <em>Symfony2</em>, <em>TYPO3 FLOW</em> und <em>Laravel</em> auf
-				Senior-Level
-			</li>
-			<li><em>TYPO3</em> Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> mit <em>Extbase
-				&amp; Fluid</em></li>
-			<li><em>Android-App</em> Entwicklung in nativem Java oder auf HTML5-Basis mit <em>Sencha Touch</em> zur
-				Veröffentlichung auf verschiedenen Devices (iOS, Android, WindowsPhone)
-			</li>
-		</ul>
-		<h3>Projektmanagement</h3>
-		<ul>
-			<li>Tätigkeit als <em>Technischer Projektmanager</em> für mehr als 2 Jahre</li>
-			<li>Erfahrung in Konzeption, Kalkulation und Steuerung von IT-Projekten im Web-Umfeld</li>
-			<li>Anleitung und Führung von Entwickler-Teams</li>
-		</ul>
-	</div>
-	<div flex class="content-icon">
-		<core-icon class="content-icon" icon="developer-mode-tv"></core-icon>
+		<div class="list-group">
+			{{#each index.leistungen}}
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="mdi-action-grade"></i>
+					</div>
+					<div class="row-content">
+						<h4 class="list-group-item-heading">{{title}}</h4>
+						{{#if text}}
+							<p class="list-group-item-text">{{{text}}}</p>
+						{{/if}}
+					</div>
+				</div>
+				{{#if @last}}
+				{{else}}
+					<div class="list-group-separator"></div>
+				{{/if}}
+			{{/each}}
+		</div>
 	</div>
 
 </div>
 
-<div layout horizontal center class="content-section dark">
-	<paper-shadow z="1"></paper-shadow>
-	<div flex three>
+<div class="content-section dark">
+
+	<div>
 		<h2>
-			<core-icon class="" icon="assignment-ind"></core-icon>
-			Kurzes Faktenblatt (Vita)
+			Kurzes Faktenblatt
+			<small>(Vita)</small>
 		</h2>
-		<ul>
-			<li>Geboren im November <em>1984</em> in Lippstadt</li>
-			<li>Aufgewachsen in Waderloh-Diestedde, gewohnt in Oelde und Bielefeld, mittlerweile
-				geankert in <em>Düsseldorf</em></li>
-			<li>Abschluss <em>2008</em> als <em>Bachelor of Science (FH)</em> in <em>Angewandter Informatik</em>
-				Schwerpunkt Medien an der FHDW
-			</li>
-			<li>6 Jahre als Webentwickler @ <em>HDNET GmbH</em>, Werther</li>
-			<li>1 Jahr als (Senior) Webentwickler @ <em>TWT Interactive GmbH</em>, Düsseldorf</li>
-			<li>2 Jahre als Technischer Projektmanager &amp; Management Supervisor bei der <em>Interone GmbH</em>,
-				Düsseldorf
-			</li>
-		</ul>
-	</div>
-	<div flex class="content-icon">
-		<core-icon class="content-icon" icon="assignment-ind"></core-icon>
+		<p>Geboren im schönen Jahre 1984 in Lippstadt, wuchs ich in Diestedde auf, zog weiter nach Oelde um dann schließlich
+		in Bielefeld mein Studium zu absolvieren. </p>
+		<p>Seit 2011 lebe und arbeite ich in Düsseldorf.</p>
+		<div class="list-group">
+			{{#each index.vita}}
+				<div class="list-group-item">
+					<div class="row-action-primary">
+						<i class="mdi-action-grade"></i>
+					</div>
+					<div class="row-content">
+						{{#if zeit}}
+							<div class="least-content">{{zeit}}</div>
+						{{/if}}
+						<h4 class="list-group-item-heading">{{{firma}}}</h4>
+						<p class="list-group-item-text">{{{position}}}</p>
+					</div>
+				</div>
+
+				{{#if @last}}
+				{{else}}
+					<div class="list-group-separator"></div>
+				{{/if}}
+			{{/each}}
+		</div>
 	</div>
 </div>
