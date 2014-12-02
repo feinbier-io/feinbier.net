@@ -1,0 +1,5 @@
+AddCharset UTF-8 .html
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^michael.feinbier.net$ [NC]
+RewriteRule ^(.*)$ http://michael.feinbier.net/$1 [L,R=301]

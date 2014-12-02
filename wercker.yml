@@ -1,0 +1,26 @@
+box: wercker/nodejs
+# Build definition
+build:
+  steps:
+    - npm-install
+    - plasticine/bower-install@0.0.4
+    - wercker/grunt@1.0.0:
+        tasks: build
+
+deploy:
+  steps:
+    - add-to-known_hosts:
+        hostname: $DEPLOY_TO_SERVER
+    - script:
+        name: Write SSH KEY
+        code: |-
+          export TEMP_KEY=`mktemp`
+          echo -e $DEPLOY_TO_SSH_KEY_PRIVATE > $TEMP_KEY
+    - sjoerdmulder/rsync-deploy@0.1.0:
+        host: $DEPLOY_TO_SERVER
+        user: $DEPLOY_TO_USER
+        directory: /var/www/michael.feinbier.net/html
+        source: dist/
+        sshkey: $TEMP_KEY
+
+

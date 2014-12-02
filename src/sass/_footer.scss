@@ -1,0 +1,81 @@
+#contact-action {
+  position: fixed;
+  background: $orange;
+  bottom: 115px;
+}
+
+footer {
+  @include make-row();
+  background: $bluegrey;
+  background: #455a64;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  posistion: relative;
+
+  a,a:hover,a:active {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $orange;
+  }
+
+  i {
+    margin-left: -35px;
+    margin-right: 10px;
+  }
+
+  .copyright {
+    @include make-xs-column(12);
+    @include make-sm-column(5);
+    @include make-sm-column-push(1);
+
+
+  }
+
+  .links {
+    @include make-xs-column(12);
+    @include make-sm-column(4);
+    @include make-sm-column-push(2);
+
+    address {
+      font-size: 13px;
+
+      i {
+        margin-left: -25px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .navigation {
+    @include make-row();
+    p {
+      @include make-xs-column(12);
+      @include make-sm-column(11);
+      @include make-sm-column-push(1);
+      font-size: 12px;
+    }
+  }
+
+  address {
+    margin: 22px 0;
+
+    strong {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.84);
+    }
+  }
+
+}
+
+//XS Size
+@media (max-width: $screen-xs-max) {
+  footer {
+    i {
+      display: none;
+    }
+  }
+}

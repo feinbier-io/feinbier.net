@@ -1,0 +1,72 @@
+.navbar-brand {
+  opacity: 1;
+  @include transition(opacity .2s ease);
+  img {
+    @include transition(margin .2s ease);
+    display: inline-block;
+    background: rgba(0, 0, 0, .1);
+    padding: 1px;
+    border-radius: 100%;
+    width: 35px;
+    height: auto;
+    margin: 0 15px 0 0;
+
+  }
+
+}
+
+//Versteckt im Normalzustand
+#top.large {
+  .navbar-brand {
+    opacity: 0;
+
+    img {
+      margin-right: 15px + 50px;
+      margin-left: -50px;
+    }
+  }
+
+  .btn {
+    color: rgba(255, 255, 255, 0.26);
+  }
+}
+
+#top.shadow {
+  //background: $orange;
+  box-shadow: $shadowString;
+}
+
+#top {
+  .btn {
+    padding: 8px 20px;
+    margin: 8px 0 0 0;
+    @include transition(color .2s ease);
+    color: $darkbg-text;
+
+    &:hover {
+      background-color: transparent;
+      color: rgba(255, 152, 0, 0.84);
+    }
+  }
+
+  i {
+    font-size: 1.7em;
+  }
+
+  .btn.mail-btn{
+	padding-left: 0;
+  }
+}
+
+//XS Size
+@media (max-width: $screen-xs-max) {
+  #top {
+	.btn {
+	  padding: 8px 10px;
+	}
+
+	.navbar-brand img {
+	  margin-right : 5px;
+	}
+  }
+}
