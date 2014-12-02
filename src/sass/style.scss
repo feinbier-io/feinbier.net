@@ -2,13 +2,12 @@ $font-size-base: 16px;
 $font-family-base: "Roboto", "Noto", sans-serif;
 $grey: #333333;
 $shadowString: 0 2px 5px rgba(0, 0, 0, 0.26);
-$material-font-path: "../bower_components/bootstrap-material-design/fonts";
+$material-font-path: "../../bower_components/bootstrap-material-design/fonts";
 //$primary: #455a64;
 $primary: #607D8B;
-@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "../bower_components/bootstrap-material-design/sass/material";
-@import "../bower_components/bootstrap-material-design/sass/icons-material-design";
-//@import "../bower_components/bootstrap-material-design/sass/material-wfont";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../../bower_components/bootstrap-material-design/sass/material";
+@import "../../bower_components/bootstrap-material-design/sass/icons-material-design";
 @import "mixins";
 body {
   margin-top: 55px;

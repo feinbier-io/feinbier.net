@@ -3,11 +3,8 @@
 bower_components
 node_modules
 
-elements/styles.css
-css/*.css
-css/*.css.map
-
-./*.html
+src/css/*.css
+src/css/*.css.map
 
 dist/*
 datenschutz.html

@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 					sourceMap: true
 				},
 				files: {
-					'css/styles.css': 'sass/style.scss'
+					'src/css/styles.css': 'src/sass/style.scss'
 				}
 			},
 			dist: {
@@ -29,20 +29,20 @@ module.exports = function (grunt) {
 					outputStyle: 'compressed'
 				},
 				files: {
-					'dist/css/styles.css': 'sass/style.scss'
+					'dist/css/styles.css': 'src/sass/style.scss'
 				}
 			}
 		},
 		watch: {
 			css: {
-				files: ['sass/*.scss'],
+				files: ['src/sass/*.scss'],
 				tasks: ['sass:dev'],
 				options: {
 					spawn: false
 				}
 			},
 			assemble: {
-				files: ['**/*.hbs', 'data/*.yml'],
+				files: ['**/*.hbs', 'src/data/*.yml'],
 				tasks: ['assemble:dev']
 			}
 		},
@@ -55,17 +55,17 @@ module.exports = function (grunt) {
 					'dist/js/main.min.js': [
 						'bower_components/bootstrap-material-design/scripts/ripples.js',
 						'bower_components/bootstrap-material-design/scripts/material.js',
-						'js/main.js',
+						'src/js/main.js',
 					]
 				}
 			}
 		},
 		assemble: {
 			options: {
-				layout: 'layouts/feinbier.hbs',
+				layout: 'src/layouts/feinbier.hbs',
 				flatten: true,
 				assets: './',
-				data: 'data/*.yml',
+				data: 'src/data/*.yml',
 				production: false
 			},
 			dist: {
@@ -73,12 +73,12 @@ module.exports = function (grunt) {
 					production: true
 				},
 				files: {
-					'dist': ["content/**/*.hbs" ]
+					'dist': ["src/content/**/*.hbs" ]
 				}
 			},
 			dev: {
 				files: {
-					'./': ["content/**/*.hbs" ]
+					'src': ["src/content/**/*.hbs" ]
 				}
 			}
 		},
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
 			dist: {
 				files: [
 					//Images
-					{expand: true, src: ['images/**'], dest: 'dist'},
+					{expand: true, flatten: true, src: ['src/images/**'], dest: 'dist/images'},
 
 					//Fonts
 					{expand: true, flatten: false, src: ['bower_components/bootstrap-material-design/fonts/*'], dest: 'dist'},
@@ -97,6 +97,8 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('default', ['watch']);
+
+	grunt.registerTask('dev', ['sass:dev', 'assemble:dev']);
 	grunt.registerTask('build', ['clean', 'sass:dist', 'uglify', 'assemble:dist', 'copy']);
 
 }
