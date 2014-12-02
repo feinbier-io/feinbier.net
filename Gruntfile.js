@@ -6,6 +6,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('assemble');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+
 
 
 
@@ -17,7 +19,7 @@ module.exports = function (grunt) {
 		sass: {
 			dev: {
 				options: {
-					sourceMap: true
+					sourcemap: 'inline'
 				},
 				files: {
 					'src/css/styles.css': 'src/sass/style.scss'
@@ -25,8 +27,8 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				options: {
-					sourceMap: false,
-					outputStyle: 'compressed'
+					sourcemap: 'none',
+					style: 'compressed'
 				},
 				files: {
 					'dist/css/styles.css': 'src/sass/style.scss'
@@ -86,10 +88,13 @@ module.exports = function (grunt) {
 			dist: {
 				files: [
 					//Images
-					{expand: true, flatten: true, src: ['src/images/**'], dest: 'dist/images'},
+					{expand: true, flatten: false, cwd: 'src', src: ['images/**'], dest: 'dist'},
 
 					//Fonts
 					{expand: true, flatten: false, src: ['bower_components/bootstrap-material-design/fonts/*'], dest: 'dist'},
+
+					//.htaccess
+					{src: '.htaccess', dest: 'dist/.htaccess'}
 				]
 			}
 		}
