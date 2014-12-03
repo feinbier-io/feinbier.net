@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('assemble');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-clean');
-
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					sourceMap: false,
-					outputStyle: 'compressed'
+					//outputStyle: 'compressed'
 				},
 				files: {
 					'dist/css/styles.css': 'src/sass/style.scss'
@@ -57,6 +57,14 @@ module.exports = function (grunt) {
 						'src/js/main.js',
 					]
 				}
+			}
+		},
+		cssmin: {
+			options: {
+				banner: "/** Compiled by sass/grunt \n @see https://github.com/michaelfeinbier/feinbier.net */"
+			},
+			build: {
+				files: {'dist/css/styles.css': 'dist/css/styles.css'}
 			}
 		},
 		assemble: {
@@ -102,6 +110,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', ['watch']);
 
 	grunt.registerTask('dev', ['sass:dev', 'assemble:dev']);
-	grunt.registerTask('build', ['clean', 'sass:dist', 'uglify', 'assemble:dist', 'copy']);
+	grunt.registerTask('build', ['clean', 'sass:dist', 'uglify','cssmin', 'assemble:dist', 'copy']);
 
 }
