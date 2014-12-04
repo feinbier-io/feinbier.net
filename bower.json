@@ -1,6 +1,6 @@
 {
-  "name": "feinbier-2014",
-  "version": "0.1.0",
+  "name": "michael-feinbier-net",
+  "version": "2.0.3",
   "description": "Web Portfolio for michael.feinbier.net",
   "moduleType": [
     "node"
@@ -20,6 +20,9 @@
   ],
   "dependencies": {
     "bootstrap-material-design": "~0.1.6",
-    "bootstrap-sass-official": "~3.3.1"
+    "bootstrap-sass-official": "~3.3.1",
+    "jquery": "~2.1.1"
+  },
+  "devDependencies": {
   }
 }

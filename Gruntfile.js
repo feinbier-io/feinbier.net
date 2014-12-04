@@ -52,6 +52,8 @@ module.exports = function (grunt) {
 			build: {
 				files: {
 					'dist/js/main.min.js': [
+						'bower_components/jquery/dist/jquery.js',
+						'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
 						'bower_components/bootstrap-material-design/scripts/ripples.js',
 						'bower_components/bootstrap-material-design/scripts/material.js',
 						'src/js/main.js',

@@ -1,6 +1,6 @@
 {
   "name": "michael-feinbier-net",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "devDependencies": {
     "load-grunt-tasks": "^0.6.0",
     "grunt": "^0.4.5",
