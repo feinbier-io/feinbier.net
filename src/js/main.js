@@ -39,6 +39,26 @@ document.addEventListener('DOMContentLoaded', function () {
 		//Kein Intro Bereich, klasse Entfernen
 		removeClass(top, 'large');
 	}
+
+
+	//Goal Tracking
+	var mailElements = document.querySelectorAll('a[href^="mailto"]'),
+		telElements = document.querySelectorAll('a[href^="tel"]'),
+		piwik = Piwik.getAsyncTracker();
+	for(var i = 0; i < mailElements.length; ++i) {
+		mailElements[i].addEventListener('click', function(e) {
+			if(!piwik) return;
+
+			piwik.trackGoal(1);
+		});
+	}
+	for(var j in telElements) {
+		telElements[j].addEventListener('click', function(e) {
+			if(!piwik) return;
+
+			piwik.trackGoal(2);
+		});
+	}
 });
 
 function removeClass(el, className) {
