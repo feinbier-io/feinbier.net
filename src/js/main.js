@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 	for(var j = 0; j < telElements.length; ++j) {
 		telElements[j].addEventListener('click', function(e) {
-			_paq.push(['trackGoal', 2]);
+			_paq.push(['trackGoal', 3]);
 		});
 	}
 });
