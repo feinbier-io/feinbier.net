@@ -20,9 +20,6 @@
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="http://michael.feinbier.net/images/facebook-cover.png">
 
-	<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
-	<link href="./bower_components/bootstrap-material-design/dist/css/material-wfont.min.css" rel="stylesheet">-->
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif|Roboto:400,700,300,500' rel='stylesheet'
 		  type='text/css'>
 	<link href="css/styles.css" rel="stylesheet">
@@ -33,7 +30,7 @@
 	<div class="container-fluid">
 		<div class="navbar-header pull-left">
 			<div class="navbar-brand">
-				<img src="images/avatar-michael.png" alt="" width="35">
+				<a href="/"><img src="images/avatar-michael.png" alt="" width="35"></a>
 				<span>Michael</span> Feinbier
 			</div>
 
@@ -77,13 +74,13 @@
 		</div>
 	</footer>
 
-	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 	{{#if production}}
 		<script src="./js/main.min.js"></script>
 
 	{{else}}
+		<script src="../bower_components/jquery/dist/jquery.js"></script>
+		<script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
 		<script src="../bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
 		<script src="../bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
 		<script src="./js/main.js"></script>

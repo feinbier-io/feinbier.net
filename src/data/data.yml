@@ -16,7 +16,7 @@ leistungen:
     title: "Symfony, TYPO3 FLOW, Laravel"
     text: "PHP Framework Entwicklungen auf Basis von <em>Symfony2</em>, <em>TYPO3 FLOW</em> und <em>Laravel</em> auf Senior-Level"
   -
-    title: TYPO3
+    title: TYPO3 Entwicklung
     text: "Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> mit <em>Extbase & Fluid</em>"
   -
     icon: mdi-action-android
@@ -24,8 +24,8 @@ leistungen:
     text: "<em>Android-App</em> Entwicklung in nativem Java oder auf HTML5-Basis mit <em>Sencha Touch</em> zur 				Veröffentlichung auf verschiedenen Devices (iOS, Android, WindowsPhone)"
 vita:
   -
-    firma: "Studium &quot;Angewandte Informatik Schwerpunkt Medien&quot; (Bachelor of Science)"
-    position: An der Fachhochschule der Wirtschaft, Bielefeld
+    firma: "Studium &quot;Angewandte Informatik Schwerpunkt Medien&quot;"
+    position: Bachelor of Science an der Fachhochschule der Wirtschaft, Bielefeld
     zeit: 2006 - 2008
     icon: mdi-social-school
   -

@@ -1,3 +1,5 @@
+var _paq = _paq || [];
+
 document.addEventListener('DOMContentLoaded', function () {
 	var top = document.getElementById('top'),
 		intro = document.getElementById('navbar-intro'),
@@ -43,20 +45,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	//Goal Tracking
 	var mailElements = document.querySelectorAll('a[href^="mailto"]'),
-		telElements = document.querySelectorAll('a[href^="tel"]'),
-		piwik = Piwik.getAsyncTracker();
+		telElements = document.querySelectorAll('a[href^="tel"]');
+
 	for(var i = 0; i < mailElements.length; ++i) {
 		mailElements[i].addEventListener('click', function(e) {
-			if(!piwik) return;
-
-			piwik.trackGoal(1);
+			_paq.push(['trackGoal', 1]);
 		});
 	}
-	for(var j in telElements) {
+	for(var j = 0; j < telElements.length; ++j) {
 		telElements[j].addEventListener('click', function(e) {
-			if(!piwik) return;
-
-			piwik.trackGoal(2);
+			_paq.push(['trackGoal', 2]);
 		});
 	}
 });
