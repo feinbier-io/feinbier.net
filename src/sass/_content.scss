@@ -42,3 +42,33 @@
 .default-content {
   @extend .leistungen;
 }
+
+//Logos (Sublayout)
+.logos {
+  @include make-row();
+  margin-top : 24px;
+
+  .logo {
+	@include make-xs-column(6);
+	@include make-md-column(4);
+	min-height: 90px;
+	margin-bottom : 24px;
+	//@include make-lg-column()
+
+	.img {
+	  opacity: .6;
+	  width: 100%;
+	  height: 85px;
+	  background-color: white;
+	  background-repeat: no-repeat;
+	  background-position: 50% 50%;
+	  background-size: contain;
+	  @include transition(all .2s ease);
+	  @extend .shadow-z-1;
+	  &:hover {
+	  	@extend .shadow-z-3;
+		opacity: 1;
+	  }
+	}
+  }
+}

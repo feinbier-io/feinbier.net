@@ -57,6 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			_paq.push(['trackGoal', 3]);
 		});
 	}
+
+	//Tooltips
+	$('.logos .logo').tooltip();
 });
 
 function removeClass(el, className) {

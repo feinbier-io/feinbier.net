@@ -1,0 +1,19 @@
+logos:
+  -
+    path: symfony.svg
+    title: Symfony Framework
+  -
+    path: Logo_TYPO3.svg
+    title: TYPO3 CMS
+  -
+    path: laravel.png
+    title: Laravel PHP Framework
+  -
+    path: flow-logo-708px.png
+    title: FLOW Framework
+  -
+    path: sencha.png
+    title: Sencha Touch for mobile Apps
+  -
+    path: wordpress.png
+    title: Wordpress CMS
