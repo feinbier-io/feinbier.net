@@ -1,3 +1,24 @@
+//Externe Links
+.external-links {
+  @include make-row();
+  background-color: $defaultBackground;
+  padding-bottom: 24px;
+
+  &>div {
+	@include make-xs-column(6);
+	@include make-sm-column(4);
+	text-align: center;
+  }
+}
+
+#contact-action {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: $orange;
+  z-index: 10;
+}
+
 footer {
   @include make-row();
   background: $footerColor;
