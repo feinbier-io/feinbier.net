@@ -7,6 +7,10 @@ build:
     - wercker/grunt@1.0.0:
         tasks: build
         fail-on-warnings: true
+  after-steps:
+    - offlinehacker/pushbullet-notify@0.0.1:
+        token: $PUSHBULLET_TOKEN
+        channel: wercker-feinbier-net
 
 deploy:
   steps:
@@ -23,5 +27,9 @@ deploy:
         directory: /var/www/michael.feinbier.net/html
         source: dist/
         sshkey: $TEMP_KEY
+  after-steps:
+    - offlinehacker/pushbullet-notify@0.0.1:
+        token: $PUSHBULLET_TOKEN
+        channel: wercker-feinbier-net
 
 
