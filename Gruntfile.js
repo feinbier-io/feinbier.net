@@ -101,8 +101,8 @@ module.exports = function (grunt) {
 					//Fonts
 					{expand: true, flatten: false, src: ['bower_components/bootstrap-material-design/fonts/*'], dest: 'dist'},
 
-					//.htaccess
-					{src: '.htaccess', dest: 'dist/.htaccess'}
+					//assets
+					{expand: true, flatten: false, cwd: 'assets', src: '**/*', dest: 'dist', dot: true}
 				]
 			}
 		}
