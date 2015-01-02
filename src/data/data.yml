@@ -1,3 +1,4 @@
+---
 mail: info@feinbier.net
 phone: "+4916094641123"
 phoneString: +49 (0) 160 / 94 64 11 23
@@ -5,6 +6,21 @@ fax: "+49 (0) 211 / 15 76 68 31"
 xing: https://www.xing.com/profile/Michael_Feinbier
 facebook: https://www.facebook.com/michael.feinbier
 github: https://github.com/michaelfeinbier
+
+meta:
+  description: Freier Entwickler und TPM für PHP, Symfony2, TYPO3 und Laravel Projekte im Raum Düsseldorf Köln
+  title: Michael Feinbier \ Freelance PHP Developer / Technical Projectmanager, Düsseldorf
+  keywords:
+    - Freelance PHP Entwickler
+    - TYPO3
+    - Symfony
+    - FLOW
+    - Wordpress
+    - iOS
+    - Android
+    - Düsseldorf
+    - Köln
+
 leistungen:
   -
     icon: mdi-editor-border-color
