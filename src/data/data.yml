@@ -6,6 +6,7 @@ fax: "+49 (0) 211 / 15 76 68 31"
 xing: https://www.xing.com/profile/Michael_Feinbier
 facebook: https://www.facebook.com/michael.feinbier
 github: https://github.com/michaelfeinbier
+typo3: http://typo3.org/certification/about-the-certification/certified-typo3-cms-integrator-listing/show/feinbier-michael/
 
 meta:
   description: Freier Entwickler und TPM für PHP, Symfony2, TYPO3 und Laravel Projekte im Raum Düsseldorf Köln
@@ -36,7 +37,7 @@ leistungen:
     text: "PHP Framework Entwicklungen auf Basis von <em>Symfony2</em>, <em>TYPO3 FLOW</em> und <em>Laravel</em> auf Senior-Level"
   -
     title: TYPO3 Entwicklung
-    text: "Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> mit <em>Extbase & Fluid</em>"
+    text: "Integration von Webseiten und Entwicklung von <em>TYPO3-Extensions</em> mit <em>Extbase & Fluid</em> als <em>Certified TYPO3 CMS Integrator</em>"
   -
     icon: mdi-action-android
     title: "Mobile Applications"

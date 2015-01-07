@@ -1,13 +1,16 @@
 logos:
-  -
-    path: symfony.svg
+  - path: TYPO3-Certified-Integrator-white-210.png
+    title: TYPO3 Certified Integrator
+
+  - path: symfony.svg
     title: Symfony Framework
+
   -
     path: Logo_TYPO3.svg
     title: TYPO3 CMS
-  -
-    path: laravel.png
-    title: Laravel PHP Framework
+#  -
+#    path: laravel.png
+#    title: Laravel PHP Framework
   -
     path: flow-logo-708px.png
     title: FLOW Framework
