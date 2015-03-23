@@ -43,6 +43,12 @@
   @extend .leistungen;
 }
 
+.half {
+  @include make-xs-column(12);
+  @include make-sm-column(5);
+  @include make-sm-column-offset(1);
+}
+
 //Logos (Sublayout)
 .logos {
   @include make-row();

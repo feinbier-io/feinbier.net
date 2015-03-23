@@ -1,61 +1,85 @@
+<div class="half">
+	<h2><i class="glyphicon glyphicon-info-sign"></i> Impressum
+		<small>und Kontakt</small>
+	</h2>
 
-<div class="default-content">
-        <h2>Impressum <small>und Kontakt</small></h2>
+	<p>
+		<small>Angaben gemäß § 5 TMG</small>
+	</p>
 
-        <p><small>Angaben gemäß § 5 TMG</small></p>
+	<p><strong>Freiberuflicher Medieninformatiker (BA / FH)<br>Michael Feinbier</strong><br>
+		Erkrather Str. 296<br>
+		40231 Düsseldorf<br>
+		<a href="/datenschutz.html">Datenschutzerklärung</a>
+	</p>
 
-        <p><strong>Freiberuflicher Medieninformatiker (BA / FH)<br>Michael Feinbier</strong><br>
-            Erkrather Str. 296<br>
-            40231 Düsseldorf<br>
-            <a href="/datenschutz.html">Datenschutzerklärung</a>
-        </p>
+	<h2><i class="glyphicon glyphicon-envelope"></i> Kontakt</h2>
 
-        <h3>Kontakt</h3>
+	<div class="list-group">
 
-		<div class="list-group">
-
-			<div class="list-group-item">
-				<div class="row-action-primary">
-					<i class="mdi-communication-call"></i>
-				</div>
-				<div class="row-content">
-					<h4 class="list-group-item-heading"><a href="tel:{{phone}}">{{{phoneString}}}</a></h4>
-
-					<p class="list-group-item-text">Telefon</p>
-				</div>
+		<div class="list-group-item">
+			<div class="row-action-primary">
+				<i class="mdi-communication-call"></i>
 			</div>
+			<div class="row-content">
+				<h4 class="list-group-item-heading"><a href="tel:{{phone}}">{{{phoneString}}}</a></h4>
 
-			<div class="list-group-separator"></div>
-
-			<div class="list-group-item">
-				<div class="row-action-primary">
-					<i class="mdi-action-print"></i>
-				</div>
-				<div class="row-content">
-					<h4 class="list-group-item-heading">{{fax}}</h4>
-
-					<p class="list-group-item-text">Fax</p>
-				</div>
+				<p class="list-group-item-text">Telefon</p>
 			</div>
+		</div>
 
-			<div class="list-group-separator"></div>
+		<div class="list-group-separator"></div>
 
-			<div class="list-group-item">
-				<div class="row-action-primary">
-					<i class="mdi-communication-email"></i>
-				</div>
-				<div class="row-content">
-					<h4 class="list-group-item-heading"><a href="mailto:{{mail}}">{{mail}}</a></h4>
-
-					<p class="list-group-item-text">E-Mail</p>
-				</div>
+		<div class="list-group-item">
+			<div class="row-action-primary">
+				<i class="mdi-action-print"></i>
 			</div>
+			<div class="row-content">
+				<h4 class="list-group-item-heading">{{fax}}</h4>
 
+				<p class="list-group-item-text">Fax</p>
 			</div>
+		</div>
 
-        <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h3>
+		<div class="list-group-separator"></div>
 
-        <p>Michael Feinbier<br>
-            Erkrather Str. 296<br>
-            40231 Düsseldorf</p>
+		<div class="list-group-item">
+			<div class="row-action-primary">
+				<i class="mdi-communication-email"></i>
+			</div>
+			<div class="row-content">
+				<h4 class="list-group-item-heading"><a href="mailto:{{mail}}">{{mail}}</a></h4>
+
+				<p class="list-group-item-text">E-Mail</p>
+			</div>
+		</div>
+
+	</div>
+
+	<h4>Verantwortlich für den Inhalt <br><small>nach § 55 Abs. 2 RStV</small></h4>
+
+	<p>Michael Feinbier<br>
+		Erkrather Str. 296<br>
+		40231 Düsseldorf</p>
+</div>
+<div class="half">
+    <h2><i class="glyphicon glyphicon-euro"></i> Bankverbindung</h2>
+    <table class="table">
+        <tr>
+            <th>Bank</th>
+            <td>{{bank}}</td>
+        </tr>
+        <tr>
+            <th>BIC/SWIFT</th>
+            <td>{{bic}}</td>
+        </tr>
+        <tr>
+            <th>IBAN</th>
+            <td>{{iban}}</td>
+        </tr>
+        <tr>
+            <th>USt-Id</th>
+            <td>{{ustid}}</td>
+        </tr>
+    </table>
 </div>
